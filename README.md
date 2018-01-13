@@ -1,6 +1,6 @@
                    CS 6210: Advanced Operating Systems
                 Project 1: Thread Scheduling with GTThreads
-                    due: Monday Feb. 05, 2018 @ 11:59pm
+                    due: Sunday Feb. 04, 2018 @ 11:59pm
 
 1. Goal
 =======
@@ -9,8 +9,8 @@ The goal of the project is to understand and implement credit-based schedulers
 in a user-level threads library. To do so you must modify the provided GTThreads
 library. The library implements a O(1) priority scheduler and a priority co-
 scheduler for reference.
-Turn in your final deliverables for the project on February 5, 2018 by 11:59pm
-via T-square only. Emails or other methods for submission will not be accepted
+Turn in your final deliverables for the project on February 4, 2018 by 11:59pm
+via Canvas only. Emails or other methods for submission will not be accepted
 (as explained in more detail below.)
 You may discuss ideas with colleagues in the class, but the project must be done
 individually. Copying others is NEVER allowed for any reason. Please refer to
@@ -41,13 +41,13 @@ Each of these items is explained in the sections below. You may be asked to
 provide a demo to the TA showing the results.
 
 Directions
-Please upload your project on the Canwas website. No emails for submission will
+Please upload your project on the Canvas website. No emails for submission will
 be accepted. Use the GTThreads package provided to you as a starting point. The
 first thing you have to do is to take a look at the provided package very
 carefully. If you have any questions, you are encouraged to bring them to the
 TAs, Mohan (mohankumar@gatech.edu), Ranjan (ranjansv@gatech.edu) during
 their office hours (to be posted soon) and you can also use the discussion
-forums on the  for posting queries, and to exchange information with other
+forums on the Canvas for posting queries, and to exchange information with other
 students.
 
 3. Multiple Schedulers for GTThreads library
@@ -70,7 +70,7 @@ the credit scheduler. In particular, look at the functions
 "sched_find_best_uthread_group" and "sched_find_best_uthread".
 ● You will be able to test your code creating Virtual Machines in an OpenStack
 cloud. Detailed information about how to set up the testing environment will
-soon be made available via T-square. However, it is recommended that you
+soon be made available via Canvas. However, it is recommended that you
 do your initial development and testing on your local machines (most of you
 must be having at least dual core machines). Once your work is sufficiently
 stable, you can test it on the virtual machine. We might ask you to demo it on
