@@ -40,7 +40,7 @@ detailing the results (as explained below).
 Each of these items is explained in the sections below. You may be asked to
 provide a demo to the TA showing the results.
 
-Directions
+Directions:
 Please upload your project on the Canvas website. No emails for submission will
 be accepted. Use the GTThreads package provided to you as a starting point. The
 first thing you have to do is to take a look at the provided package very
@@ -49,6 +49,19 @@ TAs, Mohan (mohankumar@gatech.edu), Ranjan (ranjansv@gatech.edu) during
 their office hours (to be posted soon) and you can also use the discussion
 forums on the Canvas for posting queries, and to exchange information with other
 students.
+
+Clone and mirror the project github repo into your private repository:
+
+Before you start coding, create your personal private repo on github and
+maintain your changes there.
+
+Clone the public project repo:
+       - git clone https://github.gatech.edu/cs6210-spring18/Project1
+
+Mirror to your personal private repo:
+       (In the below example /mohankku/Project1 is my private github repo)
+       - git remote set-url origin https://github.com/mohankku/Project1.git
+       - git push -u origin master
 
 3. Multiple Schedulers for GTThreads library
 ============================================
