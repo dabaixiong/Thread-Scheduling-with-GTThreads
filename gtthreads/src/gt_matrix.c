@@ -28,12 +28,8 @@
 int scheduler_type;
 int matrices_sizes[4] = {32, 64, 128, 256};
 int weights[4] = {25, 50, 75, 100};
-unsigned long int runtime[NUM_THREADS];
-// unsigned long int mean_runtime[16];
-// double sd_runtime[16];
-unsigned long int exe_time[NUM_THREADS];
-// unsigned long int mean_exe_time[NUM_THREADS];
-// double sd_exe_time[NUM_THREADS];
+long int runtime[NUM_THREADS];
+long int exe_time[NUM_THREADS];
 
 extern void gt_yield();
 
@@ -107,7 +103,7 @@ static void * uthread_mulmat(void *p)
 	int start_row, end_row;
 	int start_col, end_col;
 	unsigned int cpuid;
-	struct timeval tv2;
+	struct timeval tv2, elapsed_runtime;
 
 #define ptr ((uthread_arg_t *)p)
 
@@ -151,7 +147,9 @@ static void * uthread_mulmat(void *p)
 			ptr->tid, ptr->gid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 
 	// NEW: records total runtime (ms)
-	runtime[ptr->tid]=((tv2.tv_sec - tv1.tv_sec)*1000L)+ ((tv2.tv_usec - tv1.tv_usec)/1000L);
+	timersub(&tv2, &tv1, &elapsed_runtime);
+
+	runtime[ptr->tid] = (elapsed_runtime.tv_sec * 1000L)+ (elapsed_runtime.tv_usec / 1000.0L);
 
 #endif
 
@@ -265,7 +263,7 @@ int main(int argc, char* argv[])
                     uarg->weight = weight;
                     uarg->matrix_size = matrix_size;
 
-                    fprintf(stderr, "\nThread ID:%d, Weight:%d, Matrix Size:%d)", uarg->tid, uarg->weight, uarg->matrix_size);
+                    fprintf(stderr, "Thread ID:%d, Weight:%d, Matrix Size:%d\n", uarg->tid, uarg->weight, uarg->matrix_size);
                     uthread_create(&utids[id], uthread_mulmat, uarg, uarg->gid, weight);
 				}
 			}
@@ -274,9 +272,33 @@ int main(int argc, char* argv[])
 
 	gtthread_app_exit();
 
-	// TODO: Summary statistics
+	fprintf(stderr, "Mission Accomplished\n");
 
-	fprintf(stderr, "Mission Accomplished");
+	// DATA OUTPUT
+
+	// if(scheduler_type == 1) {
+	// 	fprintf(stderr, "\nRUNTIME DATA\n");
+	// 	int x, y, z = 0;
+
+	// 	for (x = 0; x < 16; x++) {
+	// 		for (y = 0; y < (NUM_THREADS / 16); y++) {
+	// 			fprintf(stderr, "%d\t", runtime[z * 16 + y]);
+	// 		}
+	// 		z += 1;
+	// 		fprintf(stderr, "\n");
+	// 	}
+
+	// 	z = 0;
+
+	// 	fprintf(stderr, "\nEXECUTION TIME DATA\n");
+	// 	for (x = 0; x < 16; x++) {
+	// 		for (y = 0; y < (NUM_THREADS / 16); y++) {
+	// 			fprintf(stderr, "%d\t", exe_time[z * 16 + y]);
+	// 		}
+	// 		z += 1;
+	// 		fprintf(stderr, "\n");
+	// 	}
+	// }
 
 	// print_matrix(&C);
 	// fprintf(stderr, "********************************");

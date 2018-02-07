@@ -1,0 +1,264 @@
+Thread ID:0, Weight:25, Matrix Size:32
+Thread ID:1, Weight:25, Matrix Size:32
+Thread ID:2, Weight:25, Matrix Size:32
+Thread ID:3, Weight:25, Matrix Size:32
+Thread ID:4, Weight:25, Matrix Size:32
+Thread ID:5, Weight:25, Matrix Size:32
+Thread ID:6, Weight:25, Matrix Size:32
+Thread ID:7, Weight:25, Matrix Size:32
+Thread ID:8, Weight:50, Matrix Size:32
+Thread ID:9, Weight:50, Matrix Size:32
+Thread ID:10, Weight:50, Matrix Size:32
+
+Thread(id:0, group:0) finished (TIME : 0 s and 348 us)
+Thread ID:11, Weight:50, Matrix Size:32
+Thread ID:12, Weight:50, Matrix Size:32
+Thread ID:13, Weight:50, Matrix Size:32
+
+Thread(id:4, group:0) finished (TIME : 0 s and 458 us)
+Thread ID:14, Weight:50, Matrix Size:32
+Thread ID:15, Weight:50, Matrix Size:32
+Thread ID:16, Weight:75, Matrix Size:32
+Thread ID:17, Weight:75, Matrix Size:32
+Thread ID:18, Weight:75, Matrix Size:32
+
+Thread(id:8, group:0) finished (TIME : 0 s and 598 us)
+Thread ID:19, Weight:75, Matrix Size:32
+
+Thread(id:1, group:1) finished (TIME : 0 s and 639 us)
+Thread ID:20, Weight:75, Matrix Size:32
+Thread ID:21, Weight:75, Matrix Size:32
+Thread ID:22, Weight:75, Matrix Size:32
+Thread ID:23, Weight:75, Matrix Size:32
+Thread ID:24, Weight:100, Matrix Size:32
+Thread ID:25, Weight:100, Matrix Size:32
+Thread ID:26, Weight:100, Matrix Size:32
+Thread ID:27, Weight:100, Matrix Size:32
+Thread ID:28, Weight:100, Matrix Size:32
+Thread ID:29, Weight:100, Matrix Size:32
+Thread ID:30, Weight:100, Matrix Size:32
+Thread ID:31, Weight:100, Matrix Size:32
+
+Thread(id:5, group:1) finished (TIME : 0 s and 743 us)
+Thread ID:32, Weight:25, Matrix Size:64
+Thread ID:33, Weight:25, Matrix Size:64
+Thread ID:34, Weight:25, Matrix Size:64
+Thread ID:35, Weight:25, Matrix Size:64
+Thread ID:36, Weight:25, Matrix Size:64
+Thread ID:37, Weight:25, Matrix Size:64
+Thread ID:38, Weight:25, Matrix Size:64
+Thread ID:39, Weight:25, Matrix Size:64
+Thread ID:40, Weight:50, Matrix Size:64
+Thread ID:41, Weight:50, Matrix Size:64
+Thread ID:42, Weight:50, Matrix Size:64
+Thread ID:43, Weight:50, Matrix Size:64
+Thread ID:44, Weight:50, Matrix Size:64
+Thread ID:45, Weight:50, Matrix Size:64
+Thread ID:46, Weight:50, Matrix Size:64
+Thread ID:47, Weight:50, Matrix Size:64
+Thread ID:48, Weight:75, Matrix Size:64
+Thread ID:49, Weight:75, Matrix Size:64
+Thread ID:50, Weight:75, Matrix Size:64
+Thread ID:51, Weight:75, Matrix Size:64
+Thread ID:52, Weight:75, Matrix Size:64
+Thread ID:53, Weight:75, Matrix Size:64
+Thread ID:54, Weight:75, Matrix Size:64
+Thread ID:55, Weight:75, Matrix Size:64
+Thread ID:56, Weight:100, Matrix Size:64
+Thread ID:57, Weight:100, Matrix Size:64
+Thread ID:58, Weight:100, Matrix Size:64
+Thread ID:59, Weight:100, Matrix Size:64
+Thread ID:60, Weight:100, Matrix Size:64
+Thread ID:61, Weight:100, Matrix Size:64
+Thread ID:62, Weight:100, Matrix Size:64
+Thread ID:63, Weight:100, Matrix Size:64
+
+Thread(id:16, group:0) finished (TIME : 0 s and 1015 us)
+Thread(id:20, group:0) finished (TIME : 0 s and 1031 us)
+Thread(id:9, group:1) finished (TIME : 0 s and 1041 us)
+Thread ID:64, Weight:25, Matrix Size:128
+Thread ID:65, Weight:25, Matrix Size:128
+Thread ID:66, Weight:25, Matrix Size:128
+Thread ID:67, Weight:25, Matrix Size:128
+Thread ID:68, Weight:25, Matrix Size:128
+Thread ID:69, Weight:25, Matrix Size:128
+Thread ID:70, Weight:25, Matrix Size:128
+Thread ID:71, Weight:25, Matrix Size:128
+Thread ID:72, Weight:50, Matrix Size:128
+Thread ID:73, Weight:50, Matrix Size:128
+Thread ID:74, Weight:50, Matrix Size:128
+Thread ID:75, Weight:50, Matrix Size:128
+Thread ID:76, Weight:50, Matrix Size:128
+Thread ID:77, Weight:50, Matrix Size:128
+Thread ID:78, Weight:50, Matrix Size:128
+Thread ID:79, Weight:50, Matrix Size:128
+Thread ID:80, Weight:75, Matrix Size:128
+Thread ID:81, Weight:75, Matrix Size:128
+Thread ID:82, Weight:75, Matrix Size:128
+Thread ID:83, Weight:75, Matrix Size:128
+Thread ID:84, Weight:75, Matrix Size:128
+Thread ID:85, Weight:75, Matrix Size:128
+Thread ID:86, Weight:75, Matrix Size:128
+Thread ID:87, Weight:75, Matrix Size:128
+Thread ID:88, Weight:100, Matrix Size:128
+Thread ID:89, Weight:100, Matrix Size:128
+Thread ID:90, Weight:100, Matrix Size:128
+Thread ID:91, Weight:100, Matrix Size:128
+Thread ID:92, Weight:100, Matrix Size:128
+Thread ID:93, Weight:100, Matrix Size:128
+Thread ID:94, Weight:100, Matrix Size:128
+Thread ID:95, Weight:100, Matrix Size:128
+
+Thread(id:24, group:0) finished (TIME : 0 s and 1398 us)
+Thread ID:96, Weight:25, Matrix Size:256
+Thread ID:97, Weight:25, Matrix Size:256
+Thread ID:98, Weight:25, Matrix Size:256
+Thread ID:99, Weight:25, Matrix Size:256
+Thread ID:100, Weight:25, Matrix Size:256
+Thread ID:101, Weight:25, Matrix Size:256
+Thread ID:102, Weight:25, Matrix Size:256
+Thread ID:103, Weight:25, Matrix Size:256
+Thread ID:104, Weight:50, Matrix Size:256
+Thread ID:105, Weight:50, Matrix Size:256
+Thread ID:106, Weight:50, Matrix Size:256
+Thread ID:107, Weight:50, Matrix Size:256
+Thread ID:108, Weight:50, Matrix Size:256
+Thread ID:109, Weight:50, Matrix Size:256
+Thread ID:110, Weight:50, Matrix Size:256
+Thread ID:111, Weight:50, Matrix Size:256
+Thread ID:112, Weight:75, Matrix Size:256
+Thread ID:113, Weight:75, Matrix Size:256
+Thread ID:114, Weight:75, Matrix Size:256
+Thread ID:115, Weight:75, Matrix Size:256
+Thread ID:116, Weight:75, Matrix Size:256
+Thread ID:117, Weight:75, Matrix Size:256
+Thread ID:118, Weight:75, Matrix Size:256
+Thread ID:119, Weight:75, Matrix Size:256
+Thread ID:120, Weight:100, Matrix Size:256
+Thread ID:121, Weight:100, Matrix Size:256
+Thread ID:122, Weight:100, Matrix Size:256
+Thread ID:123, Weight:100, Matrix Size:256
+Thread ID:124, Weight:100, Matrix Size:256
+Thread ID:125, Weight:100, Matrix Size:256
+Thread ID:126, Weight:100, Matrix Size:256
+Thread ID:127, Weight:100, Matrix Size:256
+
+Thread(id:12, group:0) finished (TIME : 0 s and 2349 us)
+Thread(id:28, group:0) finished (TIME : 0 s and 2641 us)
+Thread(id:32, group:0) finished (TIME : 0 s and 3286 us)
+Thread(id:36, group:0) finished (TIME : 0 s and 3322 us)
+Thread(id:40, group:0) finished (TIME : 0 s and 3773 us)
+Thread(id:44, group:0) finished (TIME : 0 s and 4933 us)
+Thread(id:48, group:0) finished (TIME : 0 s and 5578 us)
+Thread(id:52, group:0) finished (TIME : 0 s and 5595 us)
+Thread(id:60, group:0) finished (TIME : 0 s and 7663 us)
+Thread(id:56, group:0) finished (TIME : 0 s and 10651 us)
+Thread(id:64, group:0) finished (TIME : 0 s and 25764 us)
+Thread(id:76, group:0) finished (TIME : 0 s and 27258 us)
+Thread(id:72, group:0) finished (TIME : 0 s and 28891 us)
+Thread(id:80, group:0) finished (TIME : 0 s and 45830 us)
+Thread(id:92, group:0) finished (TIME : 0 s and 47022 us)
+Thread(id:68, group:0) finished (TIME : 0 s and 48689 us)
+Thread(id:88, group:0) finished (TIME : 0 s and 50799 us)
+Thread(id:84, group:0) finished (TIME : 0 s and 80418 us)
+Thread(id:104, group:0) finished (TIME : 1 s and 18446744073708857696 us)
+Thread(id:120, group:0) finished (TIME : 1 s and 18446744073708912645 us)
+Thread(id:25, group:1) finished (TIME : 1 s and 18446744073708912955 us)
+Thread(id:41, group:1) finished (TIME : 1 s and 18446744073708915194 us)
+Thread(id:57, group:1) finished (TIME : 1 s and 18446744073708917488 us)
+Thread(id:73, group:1) finished (TIME : 1 s and 18446744073708934362 us)
+Thread(id:124, group:0) finished (TIME : 1 s and 18446744073708935448 us)
+Thread(id:112, group:0) finished (TIME : 1 s and 18446744073708946784 us)
+Thread(id:89, group:1) finished (TIME : 1 s and 18446744073708952070 us)
+Thread(id:108, group:0) finished (TIME : 1 s and 18446744073708954075 us)
+Thread(id:13, group:1) finished (TIME : 1 s and 18446744073708954409 us)
+Thread(id:29, group:1) finished (TIME : 1 s and 18446744073708954695 us)
+Thread(id:45, group:1) finished (TIME : 1 s and 18446744073708957106 us)
+Thread(id:61, group:1) finished (TIME : 1 s and 18446744073708959459 us)
+Thread(id:17, group:1) finished (TIME : 1 s and 18446744073708963920 us)
+Thread(id:33, group:1) finished (TIME : 1 s and 18446744073708966241 us)
+Thread(id:49, group:1) finished (TIME : 1 s and 18446744073708968546 us)
+Thread(id:93, group:1) finished (TIME : 1 s and 18446744073708983215 us)
+Thread(id:65, group:1) finished (TIME : 1 s and 18446744073708991576 us)
+Thread(id:81, group:1) finished (TIME : 1 s and 18446744073709010999 us)
+Thread(id:21, group:1) finished (TIME : 1 s and 18446744073709175897 us)
+Thread(id:37, group:1) finished (TIME : 1 s and 18446744073709178155 us)
+Thread(id:77, group:1) finished (TIME : 1 s and 18446744073709178721 us)
+Thread(id:53, group:1) finished (TIME : 1 s and 18446744073709180392 us)
+Thread(id:69, group:1) finished (TIME : 1 s and 18446744073709223794 us)
+Thread(id:121, group:1) finished (TIME : 1 s and 18446744073709226289 us)
+Thread(id:85, group:1) finished (TIME : 1 s and 18446744073709254838 us)
+Thread(id:105, group:1) finished (TIME : 1 s and 18446744073709271465 us)
+Thread(id:26, group:2) finished (TIME : 1 s and 18446744073709271912 us)
+Thread(id:42, group:2) finished (TIME : 1 s and 18446744073709274196 us)
+Thread(id:58, group:2) finished (TIME : 1 s and 18446744073709276590 us)
+Thread(id:74, group:2) finished (TIME : 1 s and 18446744073709293282 us)
+Thread(id:90, group:2) finished (TIME : 1 s and 18446744073709311505 us)
+Thread(id:125, group:1) finished (TIME : 1 s and 18446744073709350422 us)
+Thread(id:109, group:1) finished (TIME : 1 s and 18446744073709355675 us)
+Thread(id:14, group:2) finished (TIME : 1 s and 18446744073709355968 us)
+Thread(id:30, group:2) finished (TIME : 1 s and 18446744073709356246 us)
+Thread(id:113, group:1) finished (TIME : 1 s and 18446744073709358313 us)
+Thread(id:46, group:2) finished (TIME : 1 s and 18446744073709358490 us)
+Thread(id:62, group:2) finished (TIME : 1 s and 18446744073709360765 us)
+Thread(id:2, group:2) finished (TIME : 1 s and 18446744073709371941 us)
+Thread(id:18, group:2) finished (TIME : 1 s and 18446744073709372297 us)
+Thread(id:34, group:2) finished (TIME : 1 s and 18446744073709374675 us)
+Thread(id:50, group:2) finished (TIME : 1 s and 18446744073709377198 us)
+Thread(id:94, group:2) finished (TIME : 1 s and 18446744073709391568 us)
+Thread(id:66, group:2) finished (TIME : 1 s and 18446744073709396617 us)
+Thread(id:82, group:2) finished (TIME : 1 s and 18446744073709419862 us)
+Thread(id:10, group:2) finished (TIME : 1 s and 18446744073709475745 us)
+Thread(id:106, group:2) finished (TIME : 1 s and 21136 us)
+Thread(id:78, group:2) finished (TIME : 1 s and 38995 us)
+Thread(id:122, group:2) finished (TIME : 1 s and 75986 us)
+Thread(id:11, group:3) finished (TIME : 1 s and 77174 us)
+Thread(id:27, group:3) finished (TIME : 1 s and 77404 us)
+Thread(id:43, group:3) finished (TIME : 1 s and 79181 us)
+Thread(id:59, group:3) finished (TIME : 1 s and 83264 us)
+Thread(id:75, group:3) finished (TIME : 1 s and 102323 us)
+Thread(id:91, group:3) finished (TIME : 1 s and 122661 us)
+Thread(id:126, group:2) finished (TIME : 2 s and 18446744073708773065 us)
+Thread(id:110, group:2) finished (TIME : 2 s and 18446744073708776709 us)
+Thread(id:15, group:3) finished (TIME : 2 s and 18446744073708777006 us)
+Thread(id:31, group:3) finished (TIME : 2 s and 18446744073708777285 us)
+Thread(id:47, group:3) finished (TIME : 2 s and 18446744073708779597 us)
+Thread(id:63, group:3) finished (TIME : 2 s and 18446744073708781810 us)
+Thread(id:114, group:2) finished (TIME : 2 s and 18446744073708794315 us)
+Thread(id:3, group:3) finished (TIME : 2 s and 18446744073708802129 us)
+Thread(id:19, group:3) finished (TIME : 2 s and 18446744073708802469 us)
+Thread(id:35, group:3) finished (TIME : 2 s and 18446744073708805828 us)
+Thread(id:6, group:2) finished (TIME : 2 s and 18446744073708807955 us)
+Thread(id:22, group:2) finished (TIME : 2 s and 18446744073708808255 us)
+Thread(id:38, group:2) finished (TIME : 2 s and 18446744073708810587 us)
+Thread(id:51, group:3) finished (TIME : 2 s and 18446744073708810889 us)
+Thread(id:54, group:2) finished (TIME : 2 s and 18446744073708813015 us)
+Thread(id:95, group:3) finished (TIME : 2 s and 18446744073708820939 us)
+Thread(id:67, group:3) finished (TIME : 2 s and 18446744073708835384 us)
+Thread(id:70, group:2) finished (TIME : 2 s and 18446744073708856446 us)
+Thread(id:83, group:3) finished (TIME : 2 s and 18446744073708856520 us)
+Thread(id:86, group:2) finished (TIME : 2 s and 18446744073708887398 us)
+Thread(id:123, group:3) finished (TIME : 2 s and 18446744073708963085 us)
+Thread(id:107, group:3) finished (TIME : 2 s and 18446744073708989800 us)
+Thread(id:79, group:3) finished (TIME : 2 s and 18446744073709013777 us)
+Thread(id:111, group:3) finished (TIME : 2 s and 18446744073709110250 us)
+Thread(id:127, group:3) finished (TIME : 2 s and 18446744073709188314 us)
+Thread(id:115, group:3) finished (TIME : 2 s and 18446744073709214724 us)
+Thread(id:96, group:0) finished (TIME : 2 s and 18446744073709225535 us)
+Thread(id:97, group:1) finished (TIME : 2 s and 18446744073709251148 us)
+Thread(id:98, group:2) finished (TIME : 2 s and 18446744073709266138 us)
+Thread(id:99, group:3) finished (TIME : 2 s and 18446744073709296141 us)
+Thread(id:102, group:2) finished (TIME : 2 s and 18446744073709412098 us)
+Thread(id:118, group:2) finished (TIME : 2 s and 18446744073709514709 us)
+Thread(id:7, group:3) finished (TIME : 2 s and 18446744073709514971 us)
+Thread(id:23, group:3) finished (TIME : 2 s and 18446744073709515213 us)
+Thread(id:39, group:3) finished (TIME : 2 s and 18446744073709529159 us)
+Thread(id:55, group:3) finished (TIME : 2 s and 18446744073709531226 us)
+Thread(id:71, group:3) finished (TIME : 2 s and 8283 us)
+Thread(id:87, group:3) finished (TIME : 2 s and 46252 us)
+Thread(id:103, group:3) finished (TIME : 3 s and 18446744073708890107 us)
+Thread(id:119, group:3) finished (TIME : 3 s and 18446744073709209132 us)
+Thread(id:100, group:0) finished (TIME : 3 s and 18446744073709392184 us)
+Thread(id:116, group:0) finished (TIME : 3 s and 18446744073709438234 us)
+Thread(id:101, group:1) finished (TIME : 3 s and 15184 us)
+Thread(id:117, group:1) finished (TIME : 3 s and 50722 us)

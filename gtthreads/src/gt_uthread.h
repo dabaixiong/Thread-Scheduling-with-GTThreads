@@ -37,7 +37,7 @@ typedef struct uthread_struct
 
 	// NEW
 	int weight, weight_flag;
-	struct timeval t1, t2;
+	struct timeval scheduled_time, preemp_time, elapsed_time;
 
 } uthread_struct_t;
 

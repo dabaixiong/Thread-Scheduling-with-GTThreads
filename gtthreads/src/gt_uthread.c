@@ -18,7 +18,6 @@
 // NEW
 void gt_yield();
 extern unsigned long int exe_time[128];
-long int elapsed;
 
 
 /**********************************************************************/
@@ -119,6 +118,9 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 	kthread_runqueue_t *kthread_runq;
 	uthread_struct_t *u_obj;
 
+	// NEW
+	long int elapsed;
+
 	/* Signals used for cpu_thread scheduling */
 	// kthread_block_signal(SIGVTALRM);
 	// kthread_block_signal(SIGUSR1);
@@ -130,12 +132,9 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 	k_ctx = kthread_cpu_map[kthread_apic_id()];
 	kthread_runq = &(k_ctx->krunqueue);
 
+	// thread preempted
 	if((u_obj = kthread_runq->cur_uthread))
 	{
-
-		// NEW: on CPU start time
-		gettimeofday(&(u_obj->t1),NULL);
-
 
 		/*Go through the runq and schedule the next thread to run */
 		kthread_runq->cur_uthread = NULL;
@@ -165,12 +164,18 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 			// NEW
 			if (scheduler_type == 1)
 			{
-				// Update time on CPU
-                exe_time[u_obj->uthread_tid] = exe_time[u_obj->uthread_tid] + ((u_obj->t1.tv_sec - u_obj->t2.tv_sec)*1000L + (u_obj->t1.tv_usec - u_obj->t2.tv_usec)/1000L);
-                
-				// Update weight (weight == ms)
-				elapsed = (((u_obj->t1.tv_sec - u_obj->t2.tv_sec)*1000000L + (u_obj->t1.tv_usec - u_obj->t2.tv_usec))/1000.0L)*25;
+
+				// NEW: on CPU start time
+				gettimeofday(&(u_obj->preemp_time),NULL);
+
+				// Find elapsed running time and update weight (ms)
+				timersub(&(u_obj->preemp_time), &(u_obj->scheduled_time), &(u_obj->elapsed_time));
+				elapsed = (float)(u_obj->elapsed_time.tv_sec * 1000L + u_obj->elapsed_time.tv_usec / 1000.0L);
+
                 u_obj->weight = u_obj->weight - elapsed;
+
+				// Update time on CPU
+                exe_time[u_obj->uthread_tid] = exe_time[u_obj->uthread_tid] + elapsed;
 
                 // Priority: OVER
                 if(u_obj->weight <= 0)
@@ -217,6 +222,9 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 	/* Re-install the scheduling signal handlers */
 	kthread_install_sighandler(SIGVTALRM, k_ctx->kthread_sched_timer);
 	kthread_install_sighandler(SIGUSR1, k_ctx->kthread_sched_relay);
+	
+	gettimeofday(&(u_obj->scheduled_time),NULL);
+
 	/* Jump to the selected uthread context */
 	siglongjmp(u_obj->uthread_env, 1);
 
@@ -234,7 +242,8 @@ static void uthread_context_func(int signo)
 
 	kthread_runq = &(kthread_cpu_map[kthread_apic_id()]->krunqueue);
 
-	printf("..... uthread_context_func .....\n");
+	// printf("..... uthread_context_func .....\n");
+	
 	/* kthread->cur_uthread points to newly created uthread */
 	if(!sigsetjmp(kthread_runq->cur_uthread->uthread_env,0))
 	{
