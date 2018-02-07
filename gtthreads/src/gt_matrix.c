@@ -31,8 +31,6 @@ int weights[4] = {25, 50, 75, 100};
 long int runtime[NUM_THREADS];
 long int exe_time[NUM_THREADS];
 
-extern void gt_yield();
-
 /* A[SIZE][SIZE] X B[SIZE][SIZE] = C[SIZE][SIZE]
  * Let T(g, t) be thread 't' in group 'g'. 
  * T(g, t) is responsible for multiplication : 
@@ -143,13 +141,15 @@ static void * uthread_mulmat(void *p)
 			ptr->tid, ptr->gid, cpuid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 #else
 	gettimeofday(&tv2,NULL);
-	fprintf(stderr, "\nThread(id:%d, group:%d) finished (TIME : %lu s and %lu us)",
-			ptr->tid, ptr->gid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 
 	// NEW: records total runtime (ms)
 	timersub(&tv2, &tv1, &elapsed_runtime);
 
 	runtime[ptr->tid] = (elapsed_runtime.tv_sec * 1000L)+ (elapsed_runtime.tv_usec / 1000.0L);
+
+	fprintf(stderr, "\nThread(id:%d, group:%d) finished (TIME : %lu s and %lu us)",
+			ptr->tid, ptr->gid, elapsed_runtime.tv_sec, elapsed_runtime.tv_usec);
+			// ptr->tid, ptr->gid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 
 #endif
 
@@ -272,7 +272,8 @@ int main(int argc, char* argv[])
 
 	gtthread_app_exit();
 
-	fprintf(stderr, "Mission Accomplished\n");
+	fprintf(stderr, "Mission Accomplished!\n");
+
 
 	// DATA OUTPUT
 
@@ -299,6 +300,8 @@ int main(int argc, char* argv[])
 	// 		fprintf(stderr, "\n");
 	// 	}
 	// }
+
+
 
 	// print_matrix(&C);
 	// fprintf(stderr, "********************************");

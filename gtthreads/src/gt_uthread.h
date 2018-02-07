@@ -36,7 +36,8 @@ typedef struct uthread_struct
 	TAILQ_ENTRY(uthread_struct) uthread_runq;
 
 	// NEW
-	int weight, weight_flag;
+	int weight, credit;
+	int yielded;
 	struct timeval scheduled_time, preemp_time, elapsed_time;
 
 } uthread_struct_t;

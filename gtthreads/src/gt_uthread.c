@@ -16,9 +16,24 @@
 /**********************************************************************/
 
 // NEW
-void gt_yield();
 extern unsigned long int exe_time[128];
 
+extern void gt_yield()
+{
+	kthread_context_t* k_ctx;
+	kthread_runqueue_t* kthread_runq;
+	uthread_struct_t* u_obj;
+
+	k_ctx = kthread_cpu_map[kthread_apic_id()];
+	kthread_runq = &(k_ctx->krunqueue);
+
+	if(u_obj = kthread_runq->cur_uthread)
+	{
+		u_obj->yielded = 1;
+	}
+	uthread_schedule(&sched_find_best_uthread);
+	return;
+}
 
 /**********************************************************************/
 /* kthread runqueue and env */
@@ -135,13 +150,28 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 	// thread preempted
 	if((u_obj = kthread_runq->cur_uthread))
 	{
+		// Update credit
+		if (scheduler_type == 1)
+		{
+			// NEW
+			gettimeofday(&(u_obj->preemp_time),NULL);
+
+			// Find elapsed running time and update weight (ms)
+			timersub(&(u_obj->preemp_time), &(u_obj->scheduled_time), &(u_obj->elapsed_time));
+			elapsed = (float)(u_obj->elapsed_time.tv_sec * 1000L + u_obj->elapsed_time.tv_usec / 1000.0L);
+
+            u_obj->credit = u_obj->credit - elapsed;
+		}
 
 		/*Go through the runq and schedule the next thread to run */
 		kthread_runq->cur_uthread = NULL;
 		
 		if(u_obj->uthread_state & (UTHREAD_DONE | UTHREAD_CANCELLED))
 		{
-			/* XXX: Inserting uthread into zombie queue is causing improper
+			if(scheduler_type == 1) {exe_time[u_obj->uthread_tid] = exe_time[u_obj->uthread_tid] + elapsed;}
+
+			/* XXX: Inserting uthr
+			ead into zombie queue is causing improper
 			 * cleanup/exit of uthread (core dump) */
 			uthread_head_t * kthread_zhead = &(kthread_runq->zombie_uthreads);
 			gt_spin_lock(&(kthread_runq->kthread_runqlock));
@@ -164,25 +194,24 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 			// NEW
 			if (scheduler_type == 1)
 			{
-
-				// NEW: on CPU start time
-				gettimeofday(&(u_obj->preemp_time),NULL);
-
-				// Find elapsed running time and update weight (ms)
-				timersub(&(u_obj->preemp_time), &(u_obj->scheduled_time), &(u_obj->elapsed_time));
-				elapsed = (float)(u_obj->elapsed_time.tv_sec * 1000L + u_obj->elapsed_time.tv_usec / 1000.0L);
-
-                u_obj->weight = u_obj->weight - elapsed;
-
-				// Update time on CPU
-                exe_time[u_obj->uthread_tid] = exe_time[u_obj->uthread_tid] + elapsed;
-
-                // Priority: OVER
-                if(u_obj->weight <= 0)
+                // Priority: OVER, replenish credit to weight and add to expire queue
+                if(u_obj->credit <= 0)
+                {
+                	u_obj->credit = u_obj->weight;
                     add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+                }
                 // Priority: UNDER
                 else
-                    add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock),u_obj);
+                {
+                	// Yieled through gt_yield
+                	if(u_obj->yielded) {
+                		add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+                	}
+                    else {
+                		add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock),u_obj);
+                	}
+                }
+                u_obj->yielded = 0;
 			}
 			else
 			{
@@ -295,6 +324,7 @@ extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, 
 
 	// NEW
 	u_new->weight = weight;
+	u_new->credit = weight;
 
 	/* Allocate new stack for uthread */
 	u_new->uthread_stack.ss_flags = 0; /* Stack enabled for signal handling */
