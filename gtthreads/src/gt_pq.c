@@ -176,14 +176,12 @@ extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_run
 	 * [NOT FOUND] Return NULL(no more jobs)
 	 * [FOUND] Remove uthread from pq and return it. */
 
-
 	// NEW
 	unsigned int i;
 	kthread_runqueue_t *target_kthread_runqueue;
 	runqueue_t *target_runqueue;
 	kthread_context_t *curr_k, *target_k;
 	curr_k = kthread_cpu_map[kthread_apic_id()];
-	
 
 
 	runqueue_t *runq;
@@ -200,9 +198,8 @@ extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_run
 
 	if(!(runq->uthread_mask))
 	{ /* No jobs in active. switch runqueue */
+
 		// NEW: Load Balancing - find another kthread with active runqueue
-
-
 
 		gt_spin_unlock(&(kthread_runq->kthread_runqlock));
 		
@@ -224,7 +221,6 @@ extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_run
 			}
 			else
 			{
-			
 				/* Find the highest priority bucket */
 				uprio = LOWEST_BIT_SET(target_runqueue->uthread_mask);
 				prioq = &(target_runqueue->prio_array[uprio]);
@@ -241,11 +237,6 @@ extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_run
 				return(u_obj);
 			}
 		}
-
-
-
-
-
 
 		assert(!runq->uthread_tot);
 		kthread_runq->active_runq = kthread_runq->expires_runq;

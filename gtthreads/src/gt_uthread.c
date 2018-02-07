@@ -16,7 +16,7 @@
 /**********************************************************************/
 
 // NEW
-extern unsigned long int exe_time[128];
+extern long int exe_time[128];
 
 extern void gt_yield()
 {

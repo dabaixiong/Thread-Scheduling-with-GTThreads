@@ -145,7 +145,7 @@ static void * uthread_mulmat(void *p)
 	// NEW: records total runtime (ms)
 	timersub(&tv2, &tv1, &elapsed_runtime);
 
-	runtime[ptr->tid] = ((elapsed_runtime.tv_sec * 1000000) + (elapsed_runtime.tv_usec)) / 1000;
+	runtime[ptr->tid] = ((elapsed_runtime.tv_sec * 1000000) + (elapsed_runtime.tv_usec));
 
 	fprintf(stderr, "\nThread(id: %d , group: %d ) finished (TIME : %lu s and %lu us)",
 			ptr->tid, ptr->gid, elapsed_runtime.tv_sec, elapsed_runtime.tv_usec);
