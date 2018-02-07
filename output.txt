@@ -12,20 +12,19 @@ Thread ID:7, Weight:25, Matrix Size:32
 Thread ID:8, Weight:50, Matrix Size:32
 Thread ID:9, Weight:50, Matrix Size:32
 Thread ID:10, Weight:50, Matrix Size:32
-
-Thread(id:4, group:0) started
 Thread ID:11, Weight:50, Matrix Size:32
-
-Thread(id:8, group:0) started
 Thread ID:12, Weight:50, Matrix Size:32
 Thread ID:13, Weight:50, Matrix Size:32
 Thread ID:14, Weight:50, Matrix Size:32
 Thread ID:15, Weight:50, Matrix Size:32
 Thread ID:16, Weight:75, Matrix Size:32
 Thread ID:17, Weight:75, Matrix Size:32
-Thread ID:18, Weight:75, Matrix Size:32
 
+Thread(id:4, group:0) started
+Thread(id: 4 , group: 0 ) finished (TIME : 0 s and 4250 us)
+Thread(id:5, group:1) started
 Thread(id:0, group:0) started
+Thread ID:18, Weight:75, Matrix Size:32
 Thread ID:19, Weight:75, Matrix Size:32
 Thread ID:20, Weight:75, Matrix Size:32
 Thread ID:21, Weight:75, Matrix Size:32
@@ -34,11 +33,17 @@ Thread ID:23, Weight:75, Matrix Size:32
 Thread ID:24, Weight:100, Matrix Size:32
 Thread ID:25, Weight:100, Matrix Size:32
 Thread ID:26, Weight:100, Matrix Size:32
+
+Thread(id: 5 , group: 1 ) finished (TIME : 0 s and 8245 us)
+Thread(id: 0 , group: 0 ) finished (TIME : 0 s and 8293 us)
+Thread(id:8, group:0) started
 Thread ID:27, Weight:100, Matrix Size:32
 Thread ID:28, Weight:100, Matrix Size:32
 Thread ID:29, Weight:100, Matrix Size:32
 Thread ID:30, Weight:100, Matrix Size:32
 Thread ID:31, Weight:100, Matrix Size:32
+
+Thread(id: 8 , group: 0 ) finished (TIME : 0 s and 12208 us)
 Thread ID:32, Weight:25, Matrix Size:64
 Thread ID:33, Weight:25, Matrix Size:64
 Thread ID:34, Weight:25, Matrix Size:64
@@ -50,6 +55,10 @@ Thread ID:39, Weight:25, Matrix Size:64
 Thread ID:40, Weight:50, Matrix Size:64
 Thread ID:41, Weight:50, Matrix Size:64
 Thread ID:42, Weight:50, Matrix Size:64
+
+Thread(id:20, group:0) started
+Thread(id: 20 , group: 0 ) finished (TIME : 0 s and 20255 us)
+Thread(id:16, group:0) started
 Thread ID:43, Weight:50, Matrix Size:64
 Thread ID:44, Weight:50, Matrix Size:64
 Thread ID:45, Weight:50, Matrix Size:64
@@ -58,6 +67,10 @@ Thread ID:47, Weight:50, Matrix Size:64
 Thread ID:48, Weight:75, Matrix Size:64
 Thread ID:49, Weight:75, Matrix Size:64
 Thread ID:50, Weight:75, Matrix Size:64
+
+Thread(id: 16 , group: 0 ) finished (TIME : 0 s and 24489 us)
+Thread(id:24, group:0) started
+Thread(id:32, group:0) started
 Thread ID:51, Weight:75, Matrix Size:64
 Thread ID:52, Weight:75, Matrix Size:64
 Thread ID:53, Weight:75, Matrix Size:64
@@ -66,22 +79,23 @@ Thread ID:55, Weight:75, Matrix Size:64
 Thread ID:56, Weight:100, Matrix Size:64
 Thread ID:57, Weight:100, Matrix Size:64
 Thread ID:58, Weight:100, Matrix Size:64
+
+Thread(id: 24 , group: 0 ) finished (TIME : 0 s and 28237 us)
+Thread(id: 32 , group: 0 ) finished (TIME : 0 s and 29377 us)
+Thread(id:36, group:0) started
 Thread ID:59, Weight:100, Matrix Size:64
 Thread ID:60, Weight:100, Matrix Size:64
 Thread ID:61, Weight:100, Matrix Size:64
 Thread ID:62, Weight:100, Matrix Size:64
 Thread ID:63, Weight:100, Matrix Size:64
-
-Thread(id: 4 , group: 0 ) finished (TIME : 0 s and 373 us)
-Thread(id: 8 , group: 0 ) finished (TIME : 0 s and 376 us)
-Thread(id:20, group:0) started
-Thread(id:24, group:0) started
-Thread(id: 0 , group: 0 ) finished (TIME : 0 s and 489 us)
-Thread(id:16, group:0) started
 Thread ID:64, Weight:25, Matrix Size:128
 Thread ID:65, Weight:25, Matrix Size:128
 Thread ID:66, Weight:25, Matrix Size:128
 Thread ID:67, Weight:25, Matrix Size:128
+
+Thread(id: 36 , group: 0 ) finished (TIME : 0 s and 33735 us)
+Thread(id:52, group:0) started
+Thread(id:48, group:0) started
 Thread ID:68, Weight:25, Matrix Size:128
 Thread ID:69, Weight:25, Matrix Size:128
 Thread ID:70, Weight:25, Matrix Size:128
@@ -90,14 +104,22 @@ Thread ID:72, Weight:50, Matrix Size:128
 Thread ID:73, Weight:50, Matrix Size:128
 Thread ID:74, Weight:50, Matrix Size:128
 Thread ID:75, Weight:50, Matrix Size:128
+
+Thread(id: 48 , group: 0 ) finished (TIME : 0 s and 37387 us)
+Thread(id: 52 , group: 0 ) finished (TIME : 0 s and 37764 us)
+Thread(id:40, group:0) started
 Thread ID:76, Weight:50, Matrix Size:128
 Thread ID:77, Weight:50, Matrix Size:128
 Thread ID:78, Weight:50, Matrix Size:128
+
+Thread(id:64, group:0) started
 Thread ID:79, Weight:50, Matrix Size:128
 Thread ID:80, Weight:75, Matrix Size:128
 Thread ID:81, Weight:75, Matrix Size:128
 Thread ID:82, Weight:75, Matrix Size:128
 Thread ID:83, Weight:75, Matrix Size:128
+
+Thread(id: 40 , group: 0 ) finished (TIME : 0 s and 41754 us)
 Thread ID:84, Weight:75, Matrix Size:128
 Thread ID:85, Weight:75, Matrix Size:128
 Thread ID:86, Weight:75, Matrix Size:128
@@ -106,18 +128,13 @@ Thread ID:88, Weight:100, Matrix Size:128
 Thread ID:89, Weight:100, Matrix Size:128
 Thread ID:90, Weight:100, Matrix Size:128
 Thread ID:91, Weight:100, Matrix Size:128
-Thread ID:92, Weight:100, Matrix Size:128
 
-Thread(id: 20 , group: 0 ) finished (TIME : 0 s and 671 us)
+Thread(id: 64 , group: 0 ) finished (TIME : 0 s and 50577 us)
+Thread(id:68, group:0) started
+Thread ID:92, Weight:100, Matrix Size:128
 Thread ID:93, Weight:100, Matrix Size:128
 Thread ID:94, Weight:100, Matrix Size:128
 Thread ID:95, Weight:100, Matrix Size:128
-
-Thread(id:36, group:0) started
-Thread(id: 24 , group: 0 ) finished (TIME : 0 s and 681 us)
-Thread(id:40, group:0) started
-Thread(id: 16 , group: 0 ) finished (TIME : 0 s and 842 us)
-Thread(id:32, group:0) started
 Thread ID:96, Weight:25, Matrix Size:256
 Thread ID:97, Weight:25, Matrix Size:256
 Thread ID:98, Weight:25, Matrix Size:256
@@ -147,252 +164,502 @@ Thread ID:121, Weight:100, Matrix Size:256
 Thread ID:122, Weight:100, Matrix Size:256
 Thread ID:123, Weight:100, Matrix Size:256
 Thread ID:124, Weight:100, Matrix Size:256
+
+Thread(id:80, group:0) started
 Thread ID:125, Weight:100, Matrix Size:256
 Thread ID:126, Weight:100, Matrix Size:256
 Thread ID:127, Weight:100, Matrix Size:256
 
 Thread(id:12, group:0) started
-Thread(id: 12 , group: 0 ) finished (TIME : 0 s and 1746 us)
+Thread(id: 12 , group: 0 ) finished (TIME : 0 s and 57080 us)
 Thread(id:28, group:0) started
-Thread(id: 28 , group: 0 ) finished (TIME : 0 s and 2026 us)
+Thread(id: 28 , group: 0 ) finished (TIME : 0 s and 57585 us)
 Thread(id:44, group:0) started
-Thread(id: 36 , group: 0 ) finished (TIME : 0 s and 3024 us)
-Thread(id: 40 , group: 0 ) finished (TIME : 0 s and 3032 us)
-Thread(id:52, group:0) started
 Thread(id:56, group:0) started
-Thread(id: 44 , group: 0 ) finished (TIME : 0 s and 4798 us)
+Thread(id: 44 , group: 0 ) finished (TIME : 0 s and 60174 us)
 Thread(id:60, group:0) started
-Thread(id: 52 , group: 0 ) finished (TIME : 0 s and 5042 us)
-Thread(id:68, group:0) started
-Thread(id: 60 , group: 0 ) finished (TIME : 0 s and 6934 us)
-Thread(id:76, group:0) started
-Thread(id: 32 , group: 0 ) finished (TIME : 0 s and 7193 us)
-Thread(id:48, group:0) started
-Thread(id: 48 , group: 0 ) finished (TIME : 0 s and 9525 us)
-Thread(id:64, group:0) started
-Thread(id: 56 , group: 0 ) finished (TIME : 0 s and 21057 us)
+Thread(id: 56 , group: 0 ) finished (TIME : 0 s and 61774 us)
 Thread(id:72, group:0) started
-Thread(id: 76 , group: 0 ) finished (TIME : 0 s and 26237 us)
-Thread(id:92, group:0) started
-Thread(id: 64 , group: 0 ) finished (TIME : 0 s and 34882 us)
-Thread(id:80, group:0) started
-Thread(id: 92 , group: 0 ) finished (TIME : 0 s and 44911 us)
-Thread(id:108, group:0) started
-Thread(id: 68 , group: 0 ) finished (TIME : 0 s and 53367 us)
-Thread(id:84, group:0) started
-Thread(id: 80 , group: 0 ) finished (TIME : 0 s and 58860 us)
+Thread(id: 60 , group: 0 ) finished (TIME : 0 s and 62567 us)
+Thread(id:76, group:0) started
+Thread(id: 80 , group: 0 ) finished (TIME : 0 s and 75846 us)
 Thread(id:96, group:0) started
-Thread(id: 72 , group: 0 ) finished (TIME : 0 s and 69106 us)
+Thread(id: 76 , group: 0 ) finished (TIME : 0 s and 82194 us)
+Thread(id:92, group:0) started
+Thread(id: 68 , group: 0 ) finished (TIME : 0 s and 92291 us)
+Thread(id:84, group:0) started
+Thread(id: 72 , group: 0 ) finished (TIME : 0 s and 98022 us)
 Thread(id:88, group:0) started
-Thread(id:112, group:0) started
-Thread(id:124, group:0) started
-Thread(id:104, group:0) started
+Thread(id: 92 , group: 0 ) finished (TIME : 0 s and 109006 us)
+Thread(id:108, group:0) started
+Thread(id: 84 , group: 0 ) finished (TIME : 0 s and 133624 us)
 Thread(id:100, group:0) started
+Thread(id: 88 , group: 0 ) finished (TIME : 0 s and 141670 us)
+Thread(id:104, group:0) started
+Thread(id:124, group:0) started
+Thread(id:120, group:0) started
+Thread(id:112, group:0) started
+Thread(id:116, group:0) started
 Thread(id:13, group:1) started
 Thread(id:1, group:1) started
-Thread(id: 1 , group: 1 ) finished (TIME : 0 s and 208321 us)
-Thread(id:17, group:1) started
-Thread(id: 13 , group: 1 ) finished (TIME : 0 s and 208373 us)
+Thread(id: 13 , group: 1 ) finished (TIME : 0 s and 280310 us)
 Thread(id:29, group:1) started
-Thread(id: 17 , group: 1 ) finished (TIME : 0 s and 208630 us)
-Thread(id:33, group:1) started
-Thread(id: 29 , group: 1 ) finished (TIME : 0 s and 208747 us)
+Thread(id: 1 , group: 1 ) finished (TIME : 0 s and 280395 us)
+Thread(id:17, group:1) started
+Thread(id: 29 , group: 1 ) finished (TIME : 0 s and 280606 us)
 Thread(id:45, group:1) started
-Thread(id: 33 , group: 1 ) finished (TIME : 0 s and 210918 us)
-Thread(id:49, group:1) started
-Thread(id: 45 , group: 1 ) finished (TIME : 0 s and 211112 us)
+Thread(id: 17 , group: 1 ) finished (TIME : 0 s and 280765 us)
+Thread(id:33, group:1) started
+Thread(id: 45 , group: 1 ) finished (TIME : 0 s and 282875 us)
 Thread(id:61, group:1) started
-Thread(id:120, group:0) started
-Thread(id: 49 , group: 1 ) finished (TIME : 0 s and 213198 us)
-Thread(id:65, group:1) started
-Thread(id: 61 , group: 1 ) finished (TIME : 0 s and 213476 us)
+Thread(id: 33 , group: 1 ) finished (TIME : 0 s and 283100 us)
+Thread(id:49, group:1) started
+Thread(id: 61 , group: 1 ) finished (TIME : 0 s and 285153 us)
 Thread(id:77, group:1) started
-Thread(id:116, group:0) started
-Thread(id: 65 , group: 1 ) finished (TIME : 0 s and 231301 us)
+Thread(id: 49 , group: 1 ) finished (TIME : 0 s and 285460 us)
+Thread(id:65, group:1) started
+Thread(id:21, group:1) started
+Thread(id: 21 , group: 1 ) finished (TIME : 0 s and 288276 us)
+Thread(id:37, group:1) started
+Thread(id: 37 , group: 1 ) finished (TIME : 0 s and 290524 us)
+Thread(id:53, group:1) started
+Thread(id: 53 , group: 1 ) finished (TIME : 0 s and 295763 us)
+Thread(id:69, group:1) started
+Thread(id: 77 , group: 1 ) finished (TIME : 0 s and 305853 us)
+Thread(id: 65 , group: 1 ) finished (TIME : 0 s and 306316 us)
 Thread(id:81, group:1) started
-Thread(id: 77 , group: 1 ) finished (TIME : 0 s and 239921 us)
 Thread(id:93, group:1) started
-Thread(id: 81 , group: 1 ) finished (TIME : 0 s and 250013 us)
-Thread(id:97, group:1) started
-Thread(id: 93 , group: 1 ) finished (TIME : 0 s and 258933 us)
+Thread(id: 93 , group: 1 ) finished (TIME : 0 s and 327867 us)
 Thread(id:109, group:1) started
+Thread(id: 81 , group: 1 ) finished (TIME : 0 s and 328010 us)
+Thread(id:97, group:1) started
+Thread(id: 69 , group: 1 ) finished (TIME : 0 s and 334606 us)
+Thread(id:85, group:1) started
+Thread(id: 85 , group: 1 ) finished (TIME : 0 s and 381418 us)
+Thread(id:101, group:1) started
 Thread(id:125, group:1) started
 Thread(id:113, group:1) started
-Thread(id: 84 , group: 0 ) finished (TIME : 0 s and 333364 us)
-Thread(id:5, group:1) started
-Thread(id: 5 , group: 1 ) finished (TIME : 0 s and 333575 us)
-Thread(id:21, group:1) started
-Thread(id: 21 , group: 1 ) finished (TIME : 0 s and 333781 us)
-Thread(id:37, group:1) started
-Thread(id: 37 , group: 1 ) finished (TIME : 0 s and 335515 us)
-Thread(id:53, group:1) started
-Thread(id: 88 , group: 0 ) finished (TIME : 0 s and 349065 us)
-Thread(id:9, group:1) started
-Thread(id: 9 , group: 1 ) finished (TIME : 0 s and 349291 us)
-Thread(id:25, group:1) started
-Thread(id: 25 , group: 1 ) finished (TIME : 0 s and 349498 us)
-Thread(id:41, group:1) started
-Thread(id: 41 , group: 1 ) finished (TIME : 0 s and 351232 us)
-Thread(id:57, group:1) started
-Thread(id: 57 , group: 1 ) finished (TIME : 0 s and 353285 us)
-Thread(id:73, group:1) started
-Thread(id: 53 , group: 1 ) finished (TIME : 0 s and 353664 us)
-Thread(id:69, group:1) started
-Thread(id: 73 , group: 1 ) finished (TIME : 0 s and 391930 us)
-Thread(id:89, group:1) started
-Thread(id: 69 , group: 1 ) finished (TIME : 0 s and 392200 us)
-Thread(id:85, group:1) started
-Thread(id: 85 , group: 1 ) finished (TIME : 0 s and 435214 us)
-Thread(id:101, group:1) started
-Thread(id:2, group:2) started
-Thread(id:14, group:2) started
-Thread(id: 2 , group: 2 ) finished (TIME : 0 s and 440325 us)
-Thread(id:18, group:2) started
-Thread(id: 14 , group: 2 ) finished (TIME : 0 s and 440395 us)
-Thread(id:30, group:2) started
-Thread(id: 18 , group: 2 ) finished (TIME : 0 s and 440619 us)
-Thread(id:34, group:2) started
-Thread(id: 30 , group: 2 ) finished (TIME : 0 s and 440764 us)
-Thread(id:46, group:2) started
-Thread(id: 34 , group: 2 ) finished (TIME : 0 s and 442908 us)
-Thread(id:50, group:2) started
-Thread(id: 46 , group: 2 ) finished (TIME : 0 s and 443131 us)
-Thread(id:62, group:2) started
-Thread(id:105, group:1) started
-Thread(id: 50 , group: 2 ) finished (TIME : 0 s and 445203 us)
-Thread(id:66, group:2) started
-Thread(id: 62 , group: 2 ) finished (TIME : 0 s and 445521 us)
-Thread(id:78, group:2) started
 Thread(id:117, group:1) started
-Thread(id: 78 , group: 2 ) finished (TIME : 0 s and 465702 us)
-Thread(id:94, group:2) started
-Thread(id: 66 , group: 2 ) finished (TIME : 0 s and 467201 us)
+Thread(id:9, group:1) started
+Thread(id: 9 , group: 1 ) finished (TIME : 0 s and 400225 us)
+Thread(id:25, group:1) started
+Thread(id: 25 , group: 1 ) finished (TIME : 0 s and 400433 us)
+Thread(id:41, group:1) started
+Thread(id: 41 , group: 1 ) finished (TIME : 0 s and 402185 us)
+Thread(id:57, group:1) started
+Thread(id: 57 , group: 1 ) finished (TIME : 0 s and 403931 us)
+Thread(id:73, group:1) started
+Thread(id: 73 , group: 1 ) finished (TIME : 0 s and 455361 us)
+Thread(id:89, group:1) started
+Thread(id:105, group:1) started
+Thread(id:14, group:2) started
+Thread(id:2, group:2) started
+Thread(id: 2 , group: 2 ) finished (TIME : 0 s and 492323 us)
+Thread(id:18, group:2) started
+Thread(id: 14 , group: 2 ) finished (TIME : 0 s and 492388 us)
+Thread(id:30, group:2) started
+Thread(id: 18 , group: 2 ) finished (TIME : 0 s and 492626 us)
+Thread(id:34, group:2) started
+Thread(id: 30 , group: 2 ) finished (TIME : 0 s and 492730 us)
+Thread(id:46, group:2) started
+Thread(id: 34 , group: 2 ) finished (TIME : 0 s and 494985 us)
+Thread(id:50, group:2) started
+Thread(id: 46 , group: 2 ) finished (TIME : 0 s and 495110 us)
+Thread(id:62, group:2) started
+Thread(id: 50 , group: 2 ) finished (TIME : 0 s and 497269 us)
+Thread(id:66, group:2) started
+Thread(id: 62 , group: 2 ) finished (TIME : 0 s and 497438 us)
+Thread(id:78, group:2) started
+Thread(id: 66 , group: 2 ) finished (TIME : 0 s and 518060 us)
 Thread(id:82, group:2) started
-Thread(id: 82 , group: 2 ) finished (TIME : 0 s and 485944 us)
+Thread(id: 78 , group: 2 ) finished (TIME : 0 s and 519062 us)
+Thread(id:94, group:2) started
+Thread(id: 82 , group: 2 ) finished (TIME : 0 s and 537503 us)
 Thread(id:98, group:2) started
-Thread(id: 94 , group: 2 ) finished (TIME : 0 s and 486488 us)
+Thread(id: 94 , group: 2 ) finished (TIME : 0 s and 538328 us)
 Thread(id:110, group:2) started
-Thread(id:126, group:2) started
 Thread(id:121, group:1) started
+Thread(id:126, group:2) started
 Thread(id:114, group:2) started
-Thread(id:3, group:3) started
-Thread(id: 3 , group: 3 ) finished (TIME : 0 s and 644326 us)
-Thread(id:19, group:3) started
-Thread(id: 19 , group: 3 ) finished (TIME : 0 s and 644655 us)
-Thread(id:35, group:3) started
-Thread(id: 35 , group: 3 ) finished (TIME : 0 s and 646932 us)
-Thread(id:51, group:3) started
-Thread(id: 51 , group: 3 ) finished (TIME : 0 s and 649235 us)
-Thread(id:67, group:3) started
-Thread(id: 89 , group: 1 ) finished (TIME : 0 s and 654861 us)
-Thread(id:10, group:2) started
-Thread(id: 10 , group: 2 ) finished (TIME : 0 s and 655069 us)
-Thread(id:26, group:2) started
-Thread(id: 26 , group: 2 ) finished (TIME : 0 s and 655274 us)
-Thread(id:42, group:2) started
 Thread(id:6, group:2) started
-Thread(id: 6 , group: 2 ) finished (TIME : 0 s and 656218 us)
+Thread(id: 6 , group: 2 ) finished (TIME : 0 s and 604211 us)
 Thread(id:22, group:2) started
-Thread(id: 22 , group: 2 ) finished (TIME : 0 s and 656424 us)
+Thread(id: 22 , group: 2 ) finished (TIME : 0 s and 604416 us)
 Thread(id:38, group:2) started
-Thread(id: 38 , group: 2 ) finished (TIME : 0 s and 658159 us)
+Thread(id: 38 , group: 2 ) finished (TIME : 0 s and 606166 us)
 Thread(id:54, group:2) started
-Thread(id: 54 , group: 2 ) finished (TIME : 0 s and 659979 us)
+Thread(id: 54 , group: 2 ) finished (TIME : 0 s and 607913 us)
 Thread(id:70, group:2) started
-Thread(id: 67 , group: 3 ) finished (TIME : 0 s and 675143 us)
-Thread(id:83, group:3) started
-Thread(id: 42 , group: 2 ) finished (TIME : 0 s and 669014 us)
-Thread(id:58, group:2) started
-Thread(id: 58 , group: 2 ) finished (TIME : 0 s and 678414 us)
-Thread(id:74, group:2) started
-Thread(id: 83 , group: 3 ) finished (TIME : 0 s and 693800 us)
-Thread(id:99, group:3) started
-Thread(id: 70 , group: 2 ) finished (TIME : 0 s and 711284 us)
+Thread(id: 70 , group: 2 ) finished (TIME : 0 s and 647077 us)
 Thread(id:86, group:2) started
-Thread(id: 74 , group: 2 ) finished (TIME : 0 s and 717869 us)
-Thread(id:90, group:2) started
-Thread(id: 126 , group: 2 ) finished (TIME : 0 s and 727398 us)
-Thread(id:15, group:3) started
-Thread(id: 15 , group: 3 ) finished (TIME : 0 s and 727765 us)
-Thread(id:31, group:3) started
-Thread(id: 31 , group: 3 ) finished (TIME : 0 s and 728116 us)
-Thread(id:47, group:3) started
-Thread(id: 47 , group: 3 ) finished (TIME : 0 s and 730477 us)
-Thread(id:63, group:3) started
-Thread(id: 63 , group: 3 ) finished (TIME : 0 s and 732823 us)
-Thread(id:79, group:3) started
 Thread(id:102, group:2) started
-Thread(id:115, group:3) started
+Thread(id:3, group:3) started
+Thread(id:15, group:3) started
+Thread(id: 15 , group: 3 ) finished (TIME : 0 s and 700369 us)
+Thread(id:31, group:3) started
+Thread(id: 3 , group: 3 ) finished (TIME : 0 s and 700400 us)
+Thread(id:19, group:3) started
+Thread(id: 31 , group: 3 ) finished (TIME : 0 s and 700671 us)
+Thread(id:47, group:3) started
+Thread(id: 19 , group: 3 ) finished (TIME : 0 s and 700748 us)
+Thread(id:35, group:3) started
+Thread(id: 47 , group: 3 ) finished (TIME : 0 s and 702994 us)
+Thread(id:63, group:3) started
+Thread(id: 35 , group: 3 ) finished (TIME : 0 s and 703108 us)
+Thread(id:51, group:3) started
+Thread(id: 63 , group: 3 ) finished (TIME : 0 s and 705304 us)
+Thread(id:79, group:3) started
+Thread(id: 51 , group: 3 ) finished (TIME : 0 s and 705456 us)
+Thread(id:67, group:3) started
+Thread(id: 89 , group: 1 ) finished (TIME : 0 s and 715033 us)
+Thread(id:10, group:2) started
+Thread(id: 10 , group: 2 ) finished (TIME : 0 s and 715290 us)
+Thread(id:26, group:2) started
+Thread(id: 26 , group: 2 ) finished (TIME : 0 s and 715514 us)
+Thread(id:42, group:2) started
+Thread(id: 79 , group: 3 ) finished (TIME : 0 s and 724358 us)
 Thread(id:95, group:3) started
-Thread(id:106, group:2) started
-Thread(id: 95 , group: 3 ) finished (TIME : 0 s and 766275 us)
+Thread(id: 42 , group: 2 ) finished (TIME : 0 s and 729347 us)
+Thread(id:58, group:2) started
+Thread(id: 58 , group: 2 ) finished (TIME : 0 s and 731163 us)
+Thread(id:74, group:2) started
+Thread(id: 67 , group: 3 ) finished (TIME : 0 s and 731418 us)
+Thread(id:83, group:3) started
+Thread(id: 95 , group: 3 ) finished (TIME : 0 s and 743535 us)
 Thread(id:111, group:3) started
-Thread(id:122, group:2) started
+Thread(id: 83 , group: 3 ) finished (TIME : 0 s and 750557 us)
+Thread(id:99, group:3) started
+Thread(id: 74 , group: 2 ) finished (TIME : 0 s and 770690 us)
+Thread(id:90, group:2) started
+Thread(id:106, group:2) started
+Thread(id:115, group:3) started
 Thread(id:127, group:3) started
 Thread(id:118, group:2) started
-Thread(id: 79 , group: 3 ) finished (TIME : 0 s and 955916 us)
-Thread(id: 86 , group: 2 ) finished (TIME : 0 s and 962555 us)
+Thread(id: 86 , group: 2 ) finished (TIME : 0 s and 902697 us)
 Thread(id:7, group:3) started
-Thread(id: 7 , group: 3 ) finished (TIME : 0 s and 962764 us)
+Thread(id: 7 , group: 3 ) finished (TIME : 0 s and 902918 us)
 Thread(id:23, group:3) started
-Thread(id: 23 , group: 3 ) finished (TIME : 0 s and 962969 us)
+Thread(id: 23 , group: 3 ) finished (TIME : 0 s and 903123 us)
 Thread(id:39, group:3) started
-Thread(id: 90 , group: 2 ) finished (TIME : 0 s and 955922 us)
-Thread(id:11, group:3) started
-Thread(id: 11 , group: 3 ) finished (TIME : 0 s and 964293 us)
-Thread(id:27, group:3) started
-Thread(id: 27 , group: 3 ) finished (TIME : 0 s and 964588 us)
-Thread(id:43, group:3) started
-Thread(id: 39 , group: 3 ) finished (TIME : 0 s and 964951 us)
+Thread(id:122, group:2) started
+Thread(id: 39 , group: 3 ) finished (TIME : 0 s and 916891 us)
 Thread(id:55, group:3) started
-Thread(id: 43 , group: 3 ) finished (TIME : 0 s and 966865 us)
-Thread(id:59, group:3) started
-Thread(id: 55 , group: 3 ) finished (TIME : 0 s and 967261 us)
+Thread(id: 55 , group: 3 ) finished (TIME : 0 s and 918776 us)
 Thread(id:71, group:3) started
-Thread(id: 59 , group: 3 ) finished (TIME : 0 s and 968903 us)
-Thread(id:75, group:3) started
-Thread(id: 75 , group: 3 ) finished (TIME : 1 s and 7292 us)
-Thread(id:91, group:3) started
-Thread(id: 71 , group: 3 ) finished (TIME : 1 s and 17275 us)
+Thread(id: 71 , group: 3 ) finished (TIME : 0 s and 957756 us)
 Thread(id:87, group:3) started
-Thread(id: 112 , group: 0 ) finished (TIME : 1 s and 28748 us)
-Thread(id: 87 , group: 3 ) finished (TIME : 1 s and 60759 us)
+Thread(id: 127 , group: 3 ) finished (TIME : 0 s and 975198 us)
+Thread(id: 96 , group: 0 ) finished (TIME : 0 s and 979341 us)
 Thread(id:103, group:3) started
-Thread(id:107, group:3) started
+Thread(id: 90 , group: 2 ) finished (TIME : 1 s and 21591 us)
+Thread(id: 112 , group: 0 ) finished (TIME : 1 s and 51485 us)
+Thread(id: 124 , group: 0 ) finished (TIME : 1 s and 74272 us)
 Thread(id:119, group:3) started
-Thread(id: 113 , group: 1 ) finished (TIME : 1 s and 136051 us)
-Thread(id: 124 , group: 0 ) finished (TIME : 1 s and 140869 us)
+Thread(id:11, group:3) started
+Thread(id: 11 , group: 3 ) finished (TIME : 1 s and 110764 us)
+Thread(id:27, group:3) started
+Thread(id: 27 , group: 3 ) finished (TIME : 1 s and 110974 us)
+Thread(id:43, group:3) started
+Thread(id: 43 , group: 3 ) finished (TIME : 1 s and 112719 us)
+Thread(id:59, group:3) started
+Thread(id: 59 , group: 3 ) finished (TIME : 1 s and 114458 us)
+Thread(id:75, group:3) started
+Thread(id: 75 , group: 3 ) finished (TIME : 1 s and 160990 us)
+Thread(id:91, group:3) started
+Thread(id: 108 , group: 0 ) finished (TIME : 1 s and 162962 us)
+Thread(id: 113 , group: 1 ) finished (TIME : 1 s and 179939 us)
+Thread(id:107, group:3) started
+Thread(id: 87 , group: 3 ) finished (TIME : 1 s and 212425 us)
+Thread(id: 125 , group: 1 ) finished (TIME : 1 s and 273261 us)
+Thread(id: 114 , group: 2 ) finished (TIME : 1 s and 278817 us)
 Thread(id:123, group:3) started
-Thread(id: 114 , group: 2 ) finished (TIME : 1 s and 251164 us)
-Thread(id: 125 , group: 1 ) finished (TIME : 1 s and 257577 us)
-Thread(id: 91 , group: 3 ) finished (TIME : 1 s and 284367 us)
-Thread(id: 115 , group: 3 ) finished (TIME : 1 s and 369644 us)
-Thread(id: 96 , group: 0 ) finished (TIME : 1 s and 405905 us)
-Thread(id: 111 , group: 3 ) finished (TIME : 1 s and 476964 us)
-Thread(id: 97 , group: 1 ) finished (TIME : 1 s and 478365 us)
-Thread(id: 127 , group: 3 ) finished (TIME : 1 s and 555168 us)
-Thread(id: 98 , group: 2 ) finished (TIME : 1 s and 576128 us)
-Thread(id: 108 , group: 0 ) finished (TIME : 1 s and 581359 us)
-Thread(id: 109 , group: 1 ) finished (TIME : 1 s and 655467 us)
-Thread(id: 110 , group: 2 ) finished (TIME : 1 s and 679151 us)
-Thread(id: 99 , group: 3 ) finished (TIME : 1 s and 687274 us)
-Thread(id: 102 , group: 2 ) finished (TIME : 2 s and 39156 us)
-Thread(id: 106 , group: 2 ) finished (TIME : 2 s and 46246 us)
-Thread(id: 122 , group: 2 ) finished (TIME : 2 s and 387946 us)
-Thread(id: 118 , group: 2 ) finished (TIME : 2 s and 397078 us)
-Thread(id: 107 , group: 3 ) finished (TIME : 2 s and 719000 us)
-Thread(id: 119 , group: 3 ) finished (TIME : 2 s and 753670 us)
-Thread(id: 123 , group: 3 ) finished (TIME : 3 s and 64979 us)
-Thread(id: 103 , group: 3 ) finished (TIME : 3 s and 66119 us)
-Thread(id: 104 , group: 0 ) finished (TIME : 3 s and 311513 us)
-Thread(id: 100 , group: 0 ) finished (TIME : 3 s and 314196 us)
-Thread(id: 120 , group: 0 ) finished (TIME : 3 s and 545307 us)
-Thread(id: 116 , group: 0 ) finished (TIME : 3 s and 557110 us)
-Thread(id: 105 , group: 1 ) finished (TIME : 3 s and 779386 us)
-Thread(id: 117 , group: 1 ) finished (TIME : 3 s and 808327 us)
-Thread(id: 101 , group: 1 ) finished (TIME : 4 s and 29177 us)
-Thread(id: 121 , group: 1 ) finished (TIME : 4 s and 38323 us)
+Thread(id: 91 , group: 3 ) finished (TIME : 1 s and 412821 us)
+Thread(id: 126 , group: 2 ) finished (TIME : 1 s and 468759 us)
+Thread(id: 115 , group: 3 ) finished (TIME : 1 s and 487743 us)
+Thread(id: 97 , group: 1 ) finished (TIME : 1 s and 563753 us)
+Thread(id: 111 , group: 3 ) finished (TIME : 1 s and 583775 us)
+Thread(id: 109 , group: 1 ) finished (TIME : 1 s and 633492 us)
+Thread(id: 99 , group: 3 ) finished (TIME : 1 s and 641377 us)
+Thread(id: 110 , group: 2 ) finished (TIME : 1 s and 646697 us)
+Thread(id: 98 , group: 2 ) finished (TIME : 1 s and 693583 us)
+Thread(id: 118 , group: 2 ) finished (TIME : 2 s and 26156 us)
+Thread(id: 105 , group: 1 ) finished (TIME : 2 s and 38115 us)
+Thread(id: 121 , group: 1 ) finished (TIME : 2 s and 347379 us)
+Thread(id: 103 , group: 3 ) finished (TIME : 2 s and 352161 us)
+Thread(id: 106 , group: 2 ) finished (TIME : 2 s and 675037 us)
+Thread(id: 119 , group: 3 ) finished (TIME : 2 s and 684497 us)
+Thread(id: 122 , group: 2 ) finished (TIME : 2 s and 911861 us)
+Thread(id: 100 , group: 0 ) finished (TIME : 2 s and 973199 us)
+Thread(id: 116 , group: 0 ) finished (TIME : 3 s and 198585 us)
+Thread(id: 107 , group: 3 ) finished (TIME : 3 s and 272097 us)
+Thread(id: 117 , group: 1 ) finished (TIME : 3 s and 441650 us)
+Thread(id: 123 , group: 3 ) finished (TIME : 3 s and 588449 us)
+Thread(id: 101 , group: 1 ) finished (TIME : 3 s and 673777 us)
+Thread(id: 104 , group: 0 ) finished (TIME : 3 s and 768245 us)
+Thread(id: 102 , group: 2 ) finished (TIME : 3 s and 887713 us)
+Thread(id: 120 , group: 0 ) finished (TIME : 3 s and 892341 us)
 Quitting kthread (3)
+Quitting kthread (1)
+Quitting kthread (2)
 Quitting kthread (0)
 Mission Accomplished!
-Quitting kthread (1)
+
+RUNTIME DATA
+tid 0 : 8293
+tid 1 : 280395
+tid 2 : 492323
+tid 3 : 700400
+tid 4 : 4250
+tid 5 : 8245
+tid 6 : 604211
+tid 7 : 902918
+tid 8 : 12208
+tid 9 : 400225
+tid 10 : 715290
+tid 11 : 1110764
+tid 12 : 57080
+tid 13 : 280310
+tid 14 : 492388
+tid 15 : 700369
+tid 16 : 24489
+tid 17 : 280765
+tid 18 : 492626
+tid 19 : 700748
+tid 20 : 20255
+tid 21 : 288276
+tid 22 : 604416
+tid 23 : 903123
+tid 24 : 28237
+tid 25 : 400433
+tid 26 : 715514
+tid 27 : 1110974
+tid 28 : 57585
+tid 29 : 280606
+tid 30 : 492730
+tid 31 : 700671
+tid 32 : 29377
+tid 33 : 283100
+tid 34 : 494985
+tid 35 : 703108
+tid 36 : 33735
+tid 37 : 290524
+tid 38 : 606166
+tid 39 : 916891
+tid 40 : 41754
+tid 41 : 402185
+tid 42 : 729347
+tid 43 : 1112719
+tid 44 : 60174
+tid 45 : 282875
+tid 46 : 495110
+tid 47 : 702994
+tid 48 : 37387
+tid 49 : 285460
+tid 50 : 497269
+tid 51 : 705456
+tid 52 : 37764
+tid 53 : 295763
+tid 54 : 607913
+tid 55 : 918776
+tid 56 : 61774
+tid 57 : 403931
+tid 58 : 731163
+tid 59 : 1114458
+tid 60 : 62567
+tid 61 : 285153
+tid 62 : 497438
+tid 63 : 705304
+tid 64 : 50577
+tid 65 : 306316
+tid 66 : 518060
+tid 67 : 731418
+tid 68 : 92291
+tid 69 : 334606
+tid 70 : 647077
+tid 71 : 957756
+tid 72 : 98022
+tid 73 : 455361
+tid 74 : 770690
+tid 75 : 1160990
+tid 76 : 82194
+tid 77 : 305853
+tid 78 : 519062
+tid 79 : 724358
+tid 80 : 75846
+tid 81 : 328010
+tid 82 : 537503
+tid 83 : 750557
+tid 84 : 133624
+tid 85 : 381418
+tid 86 : 902697
+tid 87 : 1212425
+tid 88 : 141670
+tid 89 : 715033
+tid 90 : 1021591
+tid 91 : 1412821
+tid 92 : 109006
+tid 93 : 327867
+tid 94 : 538328
+tid 95 : 743535
+tid 96 : 979341
+tid 97 : 1563753
+tid 98 : 1693583
+tid 99 : 1641377
+tid 100 : 2973199
+tid 101 : 3673777
+tid 102 : 3887713
+tid 103 : 2352161
+tid 104 : 3768245
+tid 105 : 2038115
+tid 106 : 2675037
+tid 107 : 3272097
+tid 108 : 1162962
+tid 109 : 1633492
+tid 110 : 1646697
+tid 111 : 1583775
+tid 112 : 1051485
+tid 113 : 1179939
+tid 114 : 1278817
+tid 115 : 1487743
+tid 116 : 3198585
+tid 117 : 3441650
+tid 118 : 2026156
+tid 119 : 2684497
+tid 120 : 3892341
+tid 121 : 2347379
+tid 122 : 2911861
+tid 123 : 3588449
+tid 124 : 1074272
+tid 125 : 1273261
+tid 126 : 1468759
+tid 127 : 975198
+
+EXECUTION TIME DATA
+tid 0 : 504
+tid 1 : 798
+tid 2 : 626
+tid 3 : 766
+tid 4 : 8344
+tid 5 : 424
+tid 6 : 426
+tid 7 : 420
+tid 8 : 8362
+tid 9 : 426
+tid 10 : 452
+tid 11 : 444
+tid 12 : 962
+tid 13 : 600
+tid 14 : 742
+tid 15 : 728
+tid 16 : 11652
+tid 17 : 726
+tid 18 : 590
+tid 19 : 658
+tid 20 : 8512
+tid 21 : 560
+tid 22 : 402
+tid 23 : 404
+tid 24 : 24464
+tid 25 : 408
+tid 26 : 444
+tid 27 : 406
+tid 28 : 1062
+tid 29 : 578
+tid 30 : 646
+tid 31 : 598
+tid 32 : 9692
+tid 33 : 4664
+tid 34 : 4708
+tid 35 : 4688
+tid 36 : 26932
+tid 37 : 4484
+tid 38 : 3490
+tid 39 : 27544
+tid 40 : 11512
+tid 41 : 3490
+tid 42 : 27660
+tid 43 : 3484
+tid 44 : 4872
+tid 45 : 4530
+tid 46 : 4726
+tid 47 : 4628
+tid 48 : 2754
+tid 49 : 4710
+tid 50 : 4558
+tid 51 : 4662
+tid 52 : 3524
+tid 53 : 10500
+tid 54 : 3488
+tid 55 : 3764
+tid 56 : 3480
+tid 57 : 3478
+tid 58 : 3596
+tid 59 : 3470
+tid 60 : 4752
+tid 61 : 4546
+tid 62 : 4624
+tid 63 : 4612
+tid 64 : 26372
+tid 65 : 41670
+tid 66 : 41708
+tid 67 : 51932
+tid 68 : 88600
+tid 69 : 77602
+tid 70 : 78324
+tid 71 : 77890
+tid 72 : 72484
+tid 73 : 102864
+tid 74 : 79034
+tid 75 : 93070
+tid 76 : 39256
+tid 77 : 41380
+tid 78 : 43258
+tid 79 : 38116
+tid 80 : 44156
+tid 81 : 42574
+tid 82 : 38716
+tid 83 : 38220
+tid 84 : 82642
+tid 85 : 93622
+tid 86 : 58294
+tid 87 : 51089
+tid 88 : 87276
+tid 89 : 42737
+tid 90 : 72382
+tid 91 : 52630
+tid 92 : 53628
+tid 93 : 40182
+tid 94 : 38350
+tid 95 : 38322
+tid 96 : 258825
+tid 97 : 243206
+tid 98 : 249148
+tid 99 : 219263
+tid 100 : 735368
+tid 101 : 673946
+tid 102 : 635873
+tid 103 : 744003
+tid 104 : 613924
+tid 105 : 748257
+tid 106 : 763279
+tid 107 : 812474
+tid 108 : 243339
+tid 109 : 199012
+tid 110 : 188060
+tid 111 : 251266
+tid 112 : 227588
+tid 113 : 262848
+tid 114 : 261578
+tid 115 : 267471
+tid 116 : 641024
+tid 117 : 700652
+tid 118 : 728314
+tid 119 : 776635
+tid 120 : 555302
+tid 121 : 734479
+tid 122 : 654613
+tid 123 : 740668
+tid 124 : 252472
+tid 125 : 250531
+tid 126 : 233516
+tid 127 : 250510

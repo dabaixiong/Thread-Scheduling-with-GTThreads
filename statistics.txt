@@ -1,18 +1,17 @@
 Summary Statistic
-Weight: 25	MatrixSize: 32	Mean_Runtime: 405.798875	SD: 316.991160253
-Weight: 50	MatrixSize: 32	Mean_Runtime: 418.4135	SD: 325.467717236
-Weight: 75	MatrixSize: 32	Mean_Runtime: 406.073875	SD: 316.957487553
-Weight: 100	MatrixSize: 32	Mean_Runtime: 418.71175	SD: 325.463579321
-Weight: 25	MatrixSize: 64	Mean_Runtime: 408.7	SD: 316.193036875
-Weight: 50	MatrixSize: 64	Mean_Runtime: 422.457625	SD: 326.452569285
-Weight: 75	MatrixSize: 64	Mean_Runtime: 412.888375	SD: 315.775077548
-Weight: 100	MatrixSize: 64	Mean_Runtime: 427.551625	SD: 324.616644032
-Weight: 25	MatrixSize: 128	Mean_Runtime: 447.831625	SD: 320.513000427
-Weight: 50	MatrixSize: 128	Mean_Runtime: 484.246625	SD: 353.783780408
-Weight: 75	MatrixSize: 128	Mean_Runtime: 535.063625	SD: 325.075167253
-Weight: 100	MatrixSize: 128	Mean_Runtime: 600.10275	SD: 375.166550687
-Weight: 25	MatrixSize: 256	Mean_Runtime: 2324.54	SD: 938.264395783
-Weight: 50	MatrixSize: 256	Mean_Runtime: 2281.13575	SD: 824.890607317
-Weight: 75	MatrixSize: 256	Mean_Runtime: 2162.724	SD: 1052.16069711
-Weight: 100	MatrixSize: 256	Mean_Runtime: 2214.695875	SD: 1149.20361233
-
+Weight: 25	MatrixSize: 32	Mean_Runtime: 375129.375	Runtime_SD: 329065.67203	Mean_Exec_Time: 1538.5	Exec_Time_SD: 2576.17890489
+Weight: 50	MatrixSize: 32	Mean_Runtime: 471079.25	Runtime_SD: 343735.864554	Mean_Exec_Time: 1589.5	Exec_Time_SD: 2565.63515528
+Weight: 75	MatrixSize: 32	Mean_Runtime: 414337.25	Runtime_SD: 296693.686572	Mean_Exec_Time: 2938.0	Exec_Time_SD: 4199.92642793
+Weight: 100	MatrixSize: 32	Mean_Runtime: 473343.75	Runtime_SD: 341084.931839	Mean_Exec_Time: 3575.75	Exec_Time_SD: 7897.50495014
+Weight: 25	MatrixSize: 64	Mean_Runtime: 419735.75	Runtime_SD: 296779.252903	Mean_Exec_Time: 10775.25	Exec_Time_SD: 9664.84081284
+Weight: 50	MatrixSize: 64	Mean_Runtime: 478394.75	Runtime_SD: 340159.548508	Mean_Exec_Time: 8112.75	Exec_Time_SD: 7773.32894824
+Weight: 75	MatrixSize: 64	Mean_Runtime: 423223.5	Runtime_SD: 295274.068379	Mean_Exec_Time: 4745.0	Exec_Time_SD: 2268.27136824
+Weight: 100	MatrixSize: 64	Mean_Runtime: 482723.5	Runtime_SD: 337183.47856	Mean_Exec_Time: 4069.75	Exec_Time_SD: 567.40852787
+Weight: 25	MatrixSize: 128	Mean_Runtime: 454762.625	Runtime_SD: 296175.121701	Mean_Exec_Time: 60512.25	Exec_Time_SD: 21354.2544107
+Weight: 50	MatrixSize: 128	Mean_Runtime: 514566.25	Runtime_SD: 341873.000386	Mean_Exec_Time: 63682.75	Exec_Time_SD: 24690.1083015
+Weight: 75	MatrixSize: 128	Mean_Runtime: 540260.0	Runtime_SD: 367204.445576	Mean_Exec_Time: 56164.125	Exec_Time_SD: 19652.5404747
+Weight: 100	MatrixSize: 128	Mean_Runtime: 626231.375	Runtime_SD: 417694.334797	Mean_Exec_Time: 53188.375	Exec_Time_SD: 16772.1867234
+Weight: 25	MatrixSize: 256	Mean_Runtime: 2345613.0	Runtime_SD: 995935.162722	Mean_Exec_Time: 469954.0	Exec_Time_SD: 229750.047248
+Weight: 50	MatrixSize: 256	Mean_Runtime: 2222552.5	Runtime_SD: 861600.177571	Mean_Exec_Time: 477451.375	Exec_Time_SD: 262950.170148
+Weight: 75	MatrixSize: 256	Mean_Runtime: 2043609.0	Runtime_SD: 889076.764649	Mean_Exec_Time: 483263.75	Exec_Time_SD: 231280.818963
+Weight: 100	MatrixSize: 256	Mean_Runtime: 2191440.0	Runtime_SD: 1088614.44009	Mean_Exec_Time: 459011.375	Exec_Time_SD: 218857.349289
