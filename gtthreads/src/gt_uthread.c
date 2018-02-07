@@ -20,18 +20,12 @@ extern unsigned long int exe_time[128];
 
 extern void gt_yield()
 {
-	kthread_context_t* k_ctx;
-	kthread_runqueue_t* kthread_runq;
 	uthread_struct_t* u_obj;
 
-	k_ctx = kthread_cpu_map[kthread_apic_id()];
-	kthread_runq = &(k_ctx->krunqueue);
-
-	if(u_obj = kthread_runq->cur_uthread)
-	{
-		u_obj->yielded = 1;
-	}
+	u_obj->yielded = 1;
+	
 	uthread_schedule(&sched_find_best_uthread);
+
 	return;
 }
 
@@ -155,12 +149,14 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 		{
 			// NEW
 			gettimeofday(&(u_obj->preemp_time),NULL);
-
-			// Find elapsed running time and update weight (ms)
 			timersub(&(u_obj->preemp_time), &(u_obj->scheduled_time), &(u_obj->elapsed_time));
-			elapsed = (float)(u_obj->elapsed_time.tv_sec * 1000L + u_obj->elapsed_time.tv_usec / 1000.0L);
+			elapsed = u_obj->elapsed_time.tv_sec * 1000000L + u_obj->elapsed_time.tv_usec;
 
-            u_obj->credit = u_obj->credit - elapsed;
+			// Update execution time
+			exe_time[u_obj->uthread_tid] += elapsed;
+
+			// Update credit
+            u_obj->credit = u_obj->credit - elapsed / 1000 + 1;
 		}
 
 		/*Go through the runq and schedule the next thread to run */

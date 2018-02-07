@@ -145,7 +145,7 @@ static void * uthread_mulmat(void *p)
 	// NEW: records total runtime (ms)
 	timersub(&tv2, &tv1, &elapsed_runtime);
 
-	runtime[ptr->tid] = (elapsed_runtime.tv_sec * 1000L)+ (elapsed_runtime.tv_usec / 1000.0L);
+	runtime[ptr->tid] = ((elapsed_runtime.tv_sec * 1000000) + (elapsed_runtime.tv_usec)) / 1000;
 
 	fprintf(stderr, "\nThread(id: %d , group: %d ) finished (TIME : %lu s and %lu us)",
 			ptr->tid, ptr->gid, elapsed_runtime.tv_sec, elapsed_runtime.tv_usec);
@@ -159,6 +159,7 @@ static void * uthread_mulmat(void *p)
 
 matrix_t A, B, C;
 
+// CHANGED
 static void init_matrices(int matrix_size)
 {
 	generate_matrix(&A, 1, matrix_size);
@@ -277,29 +278,19 @@ int main(int argc, char* argv[])
 
 	// DATA OUTPUT
 
-	// if(scheduler_type == 1) {
-	// 	fprintf(stderr, "\nRUNTIME DATA\n");
-	// 	int x, y, z = 0;
+	if(scheduler_type == 1) {
+		fprintf(stderr, "\nRUNTIME DATA\n");
+		int x;
 
-	// 	for (x = 0; x < 16; x++) {
-	// 		for (y = 0; y < (NUM_THREADS / 16); y++) {
-	// 			fprintf(stderr, "%d\t", runtime[z * 16 + y]);
-	// 		}
-	// 		z += 1;
-	// 		fprintf(stderr, "\n");
-	// 	}
+		for (x = 0; x < NUM_THREADS; x++) {
+			fprintf(stderr, "tid %d : %d\n", x, runtime[x]);
+		}
 
-	// 	z = 0;
-
-	// 	fprintf(stderr, "\nEXECUTION TIME DATA\n");
-	// 	for (x = 0; x < 16; x++) {
-	// 		for (y = 0; y < (NUM_THREADS / 16); y++) {
-	// 			fprintf(stderr, "%d\t", exe_time[z * 16 + y]);
-	// 		}
-	// 		z += 1;
-	// 		fprintf(stderr, "\n");
-	// 	}
-	// }
+		fprintf(stderr, "\nEXECUTION TIME DATA\n");
+		for (x = 0; x < NUM_THREADS; x++) {
+			fprintf(stderr, "tid %d : %d\n", x, exe_time[x]);
+		}
+	}
 
 
 
