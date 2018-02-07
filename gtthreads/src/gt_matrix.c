@@ -137,7 +137,7 @@ static void * uthread_mulmat(void *p)
 				ptr->_C->m[i][j] += ptr->_A->m[i][k] * ptr->_B->m[k][j];
 
 #ifdef GT_THREADS
-	fprintf(stderr, "\nThread(id:%d, group:%d, cpu:%d) finished (TIME : %lu s and %lu us)",
+	fprintf(stderr, "\nThread(id: %d , group: %d , cpu: %d ) finished (TIME : %lu s and %lu us)",
 			ptr->tid, ptr->gid, cpuid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 #else
 	gettimeofday(&tv2,NULL);
@@ -147,7 +147,7 @@ static void * uthread_mulmat(void *p)
 
 	runtime[ptr->tid] = (elapsed_runtime.tv_sec * 1000L)+ (elapsed_runtime.tv_usec / 1000.0L);
 
-	fprintf(stderr, "\nThread(id:%d, group:%d) finished (TIME : %lu s and %lu us)",
+	fprintf(stderr, "\nThread(id: %d , group: %d ) finished (TIME : %lu s and %lu us)",
 			ptr->tid, ptr->gid, elapsed_runtime.tv_sec, elapsed_runtime.tv_usec);
 			// ptr->tid, ptr->gid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 
