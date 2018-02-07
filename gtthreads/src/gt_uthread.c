@@ -15,6 +15,11 @@
 /** DECLARATIONS **/
 /**********************************************************************/
 
+// NEW
+void gt_yield();
+extern unsigned long int exe_time[128];
+
+
 
 /**********************************************************************/
 /* kthread runqueue and env */
@@ -127,6 +132,11 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 
 	if((u_obj = kthread_runq->cur_uthread))
 	{
+
+		// NEW: on CPU start time
+		gettimeofday(&(u_obj->t1),NULL);
+
+
 		/*Go through the runq and schedule the next thread to run */
 		kthread_runq->cur_uthread = NULL;
 		
@@ -151,7 +161,29 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 		{
 			/* XXX: Apply uthread_group_penalty before insertion */
 			u_obj->uthread_state = UTHREAD_RUNNABLE;
-			add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+
+			// NEW
+			if (scheduler_type == 1)
+			{
+				// Update time on CPU
+                exe_time[u_obj->uthread_tid] = exe_time[u_obj->uthread_tid] + ((u_obj->t1.tv_sec - u_obj->t2.tv_sec)*1000L + (u_obj->t1.tv_usec - u_obj->t2.tv_usec)/1000L);
+                
+				// Update weight (weight == ms)
+				elapsed = (((u_obj->t1.tv_sec - u_obj->t2.tv_sec)*1000000L + (u_obj->t1.tv_usec - u_obj->t2.tv_usec))/1000.0L)*25;
+                u_obj->weight = u_obj->weight - elapsed;
+
+                // Priority: OVER
+                if(u_obj->weight <= 0)
+                    add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+                // Priority: UNDER
+                else
+                    add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock),u_obj);
+			}
+			else
+			{
+				add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+			}
+
 			/* XXX: Save the context (signal mask not saved) */
 			if(sigsetjmp(u_obj->uthread_env, 0))
 				return;
@@ -230,7 +262,7 @@ static void uthread_context_func(int signo)
 
 extern kthread_runqueue_t *ksched_find_target(uthread_struct_t *);
 
-extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid)
+extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid, int weight)
 {
 	kthread_runqueue_t *kthread_runq;
 	uthread_struct_t *u_new;
@@ -251,6 +283,9 @@ extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, 
 	u_new->uthread_gid = u_gid;
 	u_new->uthread_func = u_func;
 	u_new->uthread_arg = u_arg;
+
+	// NEW
+	u_new->weight = weight;
 
 	/* Allocate new stack for uthread */
 	u_new->uthread_stack.ss_flags = 0; /* Stack enabled for signal handling */
@@ -277,7 +312,6 @@ extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, 
 	*u_tid = u_new->uthread_tid;
 	/* Queue the uthread for target-cpu. Let target-cpu take care of initialization. */
 	add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock), u_new);
-
 
 	/* WARNING : DONOT USE u_new WITHOUT A LOCK, ONCE IT IS ENQUEUED. */
 

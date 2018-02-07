@@ -25,17 +25,17 @@
 #define PER_THREAD_ROWS (SIZE/NUM_THREADS)
 
 // NEW
+int scheduler_type;
 int matrices_sizes[4] = {32, 64, 128, 256};
 int weights[4] = {25, 50, 75, 100};
 unsigned long int runtime[NUM_THREADS];
 // unsigned long int mean_runtime[16];
 // double sd_runtime[16];
-// unsigned long int exe_time[NUM_THREADS];
+unsigned long int exe_time[NUM_THREADS];
 // unsigned long int mean_exe_time[NUM_THREADS];
 // double sd_exe_time[NUM_THREADS];
 
 extern void gt_yield();
-
 
 /* A[SIZE][SIZE] X B[SIZE][SIZE] = C[SIZE][SIZE]
  * Let T(g, t) be thread 't' in group 'g'. 
@@ -174,13 +174,13 @@ static void init_matrices(int matrix_size)
 uthread_arg_t uargs[NUM_THREADS];
 uthread_t utids[NUM_THREADS];
 
-int main()
+int main(int argc, char* argv[])
 {
 	uthread_arg_t *uarg;
 	int inx;
 
 	// NEW
-	int weight, matrix_size, scheduler_type;
+	int weight, matrix_size;
 
 	if(argc > 2 || argc == 1)
 	{
@@ -193,13 +193,13 @@ int main()
 		scheduler_type = atoi(argv[1]);
 		if(scheduler_type != 1 && scheduler_type != 0)
 		{
-			fprintf(stderr, "Invalid scheduler type. Use 0 for default O(1) scheduler, 1 for credit based scheduler\n")
+			fprintf(stderr, "Invalid scheduler type. Use 0 for default O(1) scheduler, 1 for credit based scheduler\n");
 			exit(0);
 		}
 	}
 	else
 	{
-		fprintf(stderr, "EXIT: Unexpected Behavior\n")
+		fprintf(stderr, "EXIT: Unexpected Behavior\n");
 		exit(0);
 	}
 
@@ -240,14 +240,15 @@ int main()
 	else if (scheduler_type == 1)
 	{
 		for (inx = 0; inx < 4; inx++) {
-			weight = weights[inx];
 			matrix_size = matrices_sizes[inx];
 			init_matrices(matrix_size);
 
 			int i, j;
 			for (i = 0; i < 4; i++) {
+				weight = weights[i];
+
 				for (j = 0; j < 8; j++) {
-					id = 32 * inx + 8 * i + j;
+					int id = 32 * inx + 8 * i + j;
 
 					uarg = &uargs[id];
 					uarg->_A = &A;
@@ -264,17 +265,16 @@ int main()
                     uarg->weight = weight;
                     uarg->matrix_size = matrix_size;
 
+                    fprintf(stderr, "\nThread ID:%d, Weight:%d, Matrix Size:%d)", uarg->tid, uarg->weight, uarg->matrix_size);
                     uthread_create(&utids[id], uthread_mulmat, uarg, uarg->gid, weight);
 				}
 			}
-
-
 		}
-
-
 	}
 
 	gtthread_app_exit();
+
+	// TODO: Summary statistics
 
 	fprintf(stderr, "Mission Accomplished");
 

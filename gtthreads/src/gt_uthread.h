@@ -16,7 +16,6 @@ typedef unsigned int uthread_group_t;
 /* uthread struct : has all the uthread context info */
 typedef struct uthread_struct
 {
-	
 	int uthread_state; /* UTHREAD_INIT, UTHREAD_RUNNABLE, UTHREAD_RUNNING, UTHREAD_CANCELLED, UTHREAD_DONE */
 	int uthread_priority; /* uthread running priority */
 	int cpu_id; /* cpu it is currently executing on */
@@ -26,8 +25,8 @@ typedef struct uthread_struct
 	uthread_group_t uthread_gid; /* thread group id  */
 	int (*uthread_func)(void*);
 	void *uthread_arg;
-
 	void *exit_status; /* exit status */
+
 	int reserved1;
 	int reserved2;
 	int reserved3;
@@ -35,7 +34,15 @@ typedef struct uthread_struct
 	sigjmp_buf uthread_env; /* 156 bytes : save user-level thread context*/
 	stack_t uthread_stack; /* 12 bytes : user-level thread stack */
 	TAILQ_ENTRY(uthread_struct) uthread_runq;
+
+	// NEW
+	int weight, weight_flag;
+	struct timeval t1, t2;
+
 } uthread_struct_t;
+
+// NEW
+extern int scheduler_type;
 
 struct __kthread_runqueue;
 extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(struct __kthread_runqueue *));
