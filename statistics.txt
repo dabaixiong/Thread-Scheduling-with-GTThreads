@@ -1,0 +1,18 @@
+Summary Statistic
+Weight: 25	MatrixSize: 32	Mean_Runtime: 405.798875	SD: 316.991160253
+Weight: 50	MatrixSize: 32	Mean_Runtime: 418.4135	SD: 325.467717236
+Weight: 75	MatrixSize: 32	Mean_Runtime: 406.073875	SD: 316.957487553
+Weight: 100	MatrixSize: 32	Mean_Runtime: 418.71175	SD: 325.463579321
+Weight: 25	MatrixSize: 64	Mean_Runtime: 408.7	SD: 316.193036875
+Weight: 50	MatrixSize: 64	Mean_Runtime: 422.457625	SD: 326.452569285
+Weight: 75	MatrixSize: 64	Mean_Runtime: 412.888375	SD: 315.775077548
+Weight: 100	MatrixSize: 64	Mean_Runtime: 427.551625	SD: 324.616644032
+Weight: 25	MatrixSize: 128	Mean_Runtime: 447.831625	SD: 320.513000427
+Weight: 50	MatrixSize: 128	Mean_Runtime: 484.246625	SD: 353.783780408
+Weight: 75	MatrixSize: 128	Mean_Runtime: 535.063625	SD: 325.075167253
+Weight: 100	MatrixSize: 128	Mean_Runtime: 600.10275	SD: 375.166550687
+Weight: 25	MatrixSize: 256	Mean_Runtime: 2324.54	SD: 938.264395783
+Weight: 50	MatrixSize: 256	Mean_Runtime: 2281.13575	SD: 824.890607317
+Weight: 75	MatrixSize: 256	Mean_Runtime: 2162.724	SD: 1052.16069711
+Weight: 100	MatrixSize: 256	Mean_Runtime: 2214.695875	SD: 1149.20361233
+
