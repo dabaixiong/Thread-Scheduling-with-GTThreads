@@ -17,7 +17,7 @@
 #define COLS ROWS
 #define SIZE COLS
 
-#define NUM_CPUS 2
+#define NUM_CPUS 4
 #define NUM_GROUPS NUM_CPUS
 #define PER_GROUP_COLS (SIZE/NUM_GROUPS)
 

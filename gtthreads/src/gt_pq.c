@@ -17,7 +17,7 @@
 /* runqueue operations */
 static void __add_to_runqueue(runqueue_t *runq, uthread_struct_t *u_elm);
 static void __rem_from_runqueue(runqueue_t *runq, uthread_struct_t *u_elm);
-
+int NUM_CPUS;
 
 /**********************************************************************/
 /* runqueue operations */
@@ -176,6 +176,16 @@ extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_run
 	 * [NOT FOUND] Return NULL(no more jobs)
 	 * [FOUND] Remove uthread from pq and return it. */
 
+
+	// NEW
+	unsigned int i;
+	kthread_runqueue_t *target_kthread_runqueue;
+	runqueue_t *target_runqueue;
+	kthread_context_t *curr_k, *target_k;
+	curr_k = kthread_cpu_map[kthread_apic_id()];
+	
+
+
 	runqueue_t *runq;
 	prio_struct_t *prioq;
 	uthread_head_t *u_head;
@@ -187,8 +197,56 @@ extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_run
 	runq = kthread_runq->active_runq;
 
 	kthread_runq->kthread_runqlock.holder = 0x04;
+
 	if(!(runq->uthread_mask))
 	{ /* No jobs in active. switch runqueue */
+		// NEW: Load Balancing - find another kthread with active runqueue
+
+
+
+		gt_spin_unlock(&(kthread_runq->kthread_runqlock));
+		
+		// Search for active runqueue in other kthreads (NUM_CPUS)
+		for(i = 0; i != curr_k->cpuid && i < NUM_CPUS; i++)
+		{
+			target_k = kthread_cpu_map[i];
+
+			target_kthread_runqueue = &(target_k->krunqueue);
+		
+			gt_spin_lock(&(target_kthread_runqueue->kthread_runqlock));
+		
+			target_runqueue = target_kthread_runqueue->active_runq;
+		
+			if(!(target_runqueue->uthread_mask))
+			{
+				gt_spin_unlock(&(target_kthread_runqueue->kthread_runqlock));
+				break;
+			}
+			else
+			{
+			
+				/* Find the highest priority bucket */
+				uprio = LOWEST_BIT_SET(target_runqueue->uthread_mask);
+				prioq = &(target_runqueue->prio_array[uprio]);
+
+				assert(prioq->group_mask);
+				ugroup = LOWEST_BIT_SET(prioq->group_mask);
+
+				u_head = &(prioq->group[ugroup]);
+				u_obj = TAILQ_FIRST(u_head);
+				__rem_from_runqueue(target_runqueue, u_obj);
+
+				gt_spin_unlock(&(target_kthread_runqueue->kthread_runqlock));
+
+				return(u_obj);
+			}
+		}
+
+
+
+
+
+
 		assert(!runq->uthread_tot);
 		kthread_runq->active_runq = kthread_runq->expires_runq;
 		kthread_runq->expires_runq = runq;
